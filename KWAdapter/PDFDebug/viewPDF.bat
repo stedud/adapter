@@ -1,0 +1,1 @@
+java -jar "C:\Data\OneDrive\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapterREST\lib\pdfbox-app-2.0.21.jar" PDFDebugger "%1%

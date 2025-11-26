@@ -1,0 +1,56 @@
+StreamIn
+// Generated with StreamIN
+  Root Name "Message"
+    Field "HEADER_mode" $HEADER_mode
+    Field "HEADER_dest" $HEADER_dest
+    Field "HEADER_refTel" $HEADER_refTel
+    Field "HEADER_periode" $HEADER_periode
+    Field "HEADER_nom" $HEADER_nom
+    Field "HEADER_libellePole" $HEADER_libellePole
+    Field "HEADER_libelleUnite" $HEADER_libelleUnite
+    Field "HEADER_matricule" $HEADER_matricule
+    Field "HEADER_libelleUniteStruct" $HEADER_libelleUniteStruct
+    Field "HEADER_horaireLibre" $HEADER_horairelibre
+    Field "HEADER_printKey" $HEADER_printKey
+    Field "HEADER_pdfKey" $HEADER_pdfKey
+    Field "HEADER_CcText" $HEADER_CcText
+    Field "HEADER_MastCctr" $HEADER_MastCctr Format "Nk= d=,"
+    Field "CORE_END_editKey" $CORE_END_editKey
+    Block "start"
+      Field "CORE_START_editKey" $CORE_START_editKey
+      Field "CORE_START_hSoldePrec"
+      Field "CORE_START_hsPrec"
+      Field "CORE_START_hCongeAnPrc"
+      Field "CORE_START_proghebdo" $CORE_START_proghebdo
+    End
+    Block "core"
+      Field "CORE_date" $CORE_date
+      Field "CORE_libelleEvene"
+      Field "CORE_hCredit"
+      Field "CORE_hDivers"
+      Field "CORE_hs"
+      Field "CORE_indPiq"
+      Field "CORE_indRep"
+      Field "CORE_indDep"
+      Field "CORE_hsRep"
+      Field "CORE_hCongeAnRep"
+    End
+    Block "Total"
+      Field "CORE_END_hTotal" $CORE_END_hTotal
+      Field "CORE_END_indPiqTotal" $CORE_END_indPiqTotal
+      Field "CORE_END_indRepTotal" $CORE_END_indRepTotal
+      Field "CORE_END_indDepTotal" $CORE_END_indDepTotal
+    End
+    Block "Heure_due"
+      Field "CORE_END_hDues" $CORE_END_hDues
+      Field "CORE_END_hNuitTotal" $CORE_END_hNuitTotal
+    End
+    Block "nouveau_solde"
+      Field "CORE_END_hSolde" $CORE_END_hSolde Format "Nk=,d=."
+      Field "CORE_END_hEcret" $CORE_END_hEcret
+      Field "CORE_END_hEcrt" $CORE_END_hEcrt
+      Field "CORE_END_hsTotal" $CORE_END_hsTotal
+      Field "CORE_END_Zsolde" $CORE_END_Zsolde
+      Field "CORE_END_hCongeAnTotal" $CORE_END_hCongeAnTotal
+    End
+  End

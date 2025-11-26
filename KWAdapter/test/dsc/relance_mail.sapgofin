@@ -1,0 +1,36 @@
+Event "Mail_in"
+PageIn
+// MessageID "2942224"
+
+    Field "Facture_No" 51 229 111 241 $Facture_No;
+ Field "Client_No" 50 249 114 260 $Client_No;
+ Field "Echeance" 51 266 115 279 $Echeance Format "Ddd.mm.yyyy";
+ Field "Compte" 52 286 120 299 $Compte;
+ Field "Montant" 51 305 118 318 $Montant Format "Nk=,d=.";
+ Field "From" 52 324 449 337 $From;
+ Field "To" 52 343 451 356 $To;
+ Field "Niveau" 52 362 69 376 $Niveau;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.3,841.9" order="1" xoffset="15" type="FIRST">
+    <pattern name="Mail" position="17.0,2.0" size="21.0,24.0" options="276" match="E"/>
+    <field name="MailPattern" position="17.0,2.0" size="21.0,24.0" options="20" />
+    <field name="Facture_No" description="Numéro de facture" position="50.0,228.0" size="60.0,12.0" variable="Facture_No" options="20"/>
+    <field name="Client_No" description="Numéro de client" position="49.0,248.0" size="64.0,11.0" variable="Client_No" options="20"/>
+    <field name="Echeance" description="Echéance " position="50.0,265.0" size="64.0,13.0" variable="Echeance" format="Ddd.mm.yyyy" options="20"/>
+    <field name="Compte" description="Compte de contrat" position="51.0,285.0" size="68.0,13.0" variable="Compte" options="20"/>
+    <field name="Montant" description="Montant" position="50.0,304.0" size="67.0,13.0" variable="Montant" format="Nk=,d=." options="20"/>
+    <field name="From" description="Emetteur du mail" position="51.0,323.0" size="397.0,13.0" variable="From" options="20"/>
+    <field name="To" description="Destinataire du mail" position="51.0,342.0" size="399.0,13.0" variable="To" options="20"/>
+    <field name="Niveau" description="Type de mail de relance" position="51.0,361.0" size="17.0,14.0" variable="Niveau" options="20"/>
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

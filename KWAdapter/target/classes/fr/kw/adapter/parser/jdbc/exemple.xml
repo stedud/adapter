@@ -1,0 +1,19 @@
+<jdbc>
+	<datasources>
+		<datasource id="db1">
+			<driver></driver>
+			<url></url>
+			<user></user>
+			<pwd></pwd>
+		</datasource>
+	</datasources>
+	<queries>
+		<query>
+			<select>select * from table1</select>
+				<query>
+					<select>select * from table2 where champ2a='table1.champ1a'</select>
+				</query>
+			<update when="row/end">update table1 set champ1.a='XXX'</update>
+		</query>
+	</queries>
+</jdbc>

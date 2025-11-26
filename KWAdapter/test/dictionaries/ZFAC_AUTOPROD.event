@@ -1,0 +1,699 @@
+StreamIn
+// Generated with StreamIN
+  Root Name "Message"
+
+    Field "HEAD_GV_TYPE_FACT" $HEAD_GV_TYPE_FACT
+    Field "HEAD_P_ADRESSE01" $HEAD_P_ADRESSE01
+    Field "HEAD_P_ADRESSE02" $HEAD_P_ADRESSE02
+    Field "HEAD_P_ADRESSE03" $HEAD_P_ADRESSE03
+    Field "HEAD_P_ADRESSE04" $HEAD_P_ADRESSE04
+    Field "HEAD_P_ADRESSE05" $HEAD_P_ADRESSE05
+    Field "HEAD_P_ADRESSE06" $HEAD_P_ADRESSE06
+    Field "HEAD_P_TITRE"
+    Field "HEAD_GV_TITRE" $HEAD_GV_TITRE
+    Field "HEAD_GV_RLVABS" $HEAD_GV_RLVABS
+    Field "HEAD_FV_COMMENT" $HEAD_FV_COMMENT
+    Field "HEAD_AB" $HEAD_AB Format "Ddd.mm.yyyy"
+    Field "HEAD_BIS" $HEAD_BIS Format "Ddd.mm.yyyy"
+    Field "HEAD_GV_NBR_JOURS" $HEAD_GV_NBR_JOURS
+    Field "HEAD_FV_DATE_BIS" $HEAD_FV_DATE_BIS
+    Field "HEAD_FV_NEXT_RLV" $HEAD_FV_NEXT_RLV
+    Field "HEAD_GV_PRINT_NEXT_RLV" $HEAD_GV_PRINT_NEXT_RLV
+    Field "HEAD_GV_NEXT_RLV" $HEAD_GV_NEXT_RLV Format "Ddd.mm.yyyy"
+    Field "HEAD_GV_DEPOSE_FIN" $HEAD_GV_DEPOSE_FIN
+    Field "HEAD_GV_NBR_FLUIDE" $HEAD_GV_NBR_FLUIDE
+    Field "HEAD_GV_POSTE" $HEAD_GV_POSTE
+    Field "HEAD_GV_CLETRI" $HEAD_GV_CLETRI
+    Field "HEAD_GV_IND_DUPLICATA"
+    Field "HEAD_GV_CHOIX_01" $HEAD_GV_CHOIX_01
+    Field "DOC_DATA_WA_DOC_HEADER-FAEDN" $DOC_DATA_WA_DOC_HEADER_FAEDN Format "Ddd.mm.yyyy"
+    Field "MAIN_WA_DOC_HEADER-TOTAL_WAER" $MAIN_WA_DOC_HEADER_TOTAL_WAER
+
+    Field "DOC_DATA_GV_PLANRED" $DOC_DATA_GV_PLANRED
+    Field "DOC_DATA_WA_DOC_HEADER-VKONT" $DOC_DATA_WA_DOC_HEADER_VKONT Format "Nk=,d=."
+    Field "DOC_DATA_GV_FIDELITE" $DOC_DATA_GV_FIDELITE
+    Field "DOC_DATA_WA_DOC_HEADER-PARTNER" $DOC_DATA_WA_DOC_HEADER_PARTNER Format "Nk=,d=."
+    Field "DOC_DATA_WA_DOC_HEADER-OPBEL" $DOC_DATA_WA_DOC_HEADER_OPBEL Format "Nk=,d=."
+    Field "DOC_DATA_WA_DOC_HEADER-BLDAT" $DOC_DATA_WA_DOC_HEADER_BLDAT Format "Ddd.mm.yyyy"
+    Field "DOC_DATA_WA_DOC_HEADER-PORTION" $DOC_DATA_WA_DOC_HEADER_PORTION
+    Field "DOC_DATA_WA_CONT_ACCT-EXVKO" $DOC_DATA_WA_CONT_ACCT_EXVKO
+    Field "DOC_DATA_WA_CONT_ACCT-VKBEZ" $DOC_DATA_WA_CONT_ACCT_VKBEZ
+    Field "DOC_DATA_GV_PART_TEF" $DOC_DATA_GV_PART_TEF
+    Field "DOC_DATA_GV_ADR1_C" $DOC_DATA_GV_ADR1_C
+    Field "DOC_DATA_GV_ADR2_C" $DOC_DATA_GV_ADR2_C
+    Field "DOC_DATA_GV_ADR3_C" $DOC_DATA_GV_ADR3_C
+    Field "DOC_DATA_GV_ADR4_C" $DOC_DATA_GV_ADR4_C
+    Field "DOC_DATA_POUR_IMP" $DOC_DATA_POUR_IMP
+    Field "DOC_DATA_POUR_TEF" $DOC_DATA_POUR_TEF
+    Field "DOC_DATA_POUR_MAIL" $DOC_DATA_POUR_MAIL
+    Field "DOC_DATA_POUR_PREVIEW" $DOC_DATA_POUR_PREVIEW
+    Field "DOC_DATA_POUR_ARCHIVE" $DOC_DATA_POUR_ARCHIVE
+    Field "DOC_DATA_GV_FACSOLDE" $DOC_DATA_GV_FACSOLDE
+    Field "DOC_DATA_SYST-SYSID" $DOC_DATA_SYST_SYSID
+    Field "DOC_DATA_GV_FAC_DETAIL" $DOC_DATA_GV_FAC_DETAIL
+    Field "DOC_DATA_GV_FAC_SIMPLIFIEE" $DOC_DATA_GV_FAC_SIMPLIFIEE
+    Field "DOC_DATA_GV_CODFAC" $DOC_DATA_GV_CODFAC
+    Field "DOC_DATA_GV_ANNEXE1" $DOC_DATA_GV_ANNEXE1
+    Field "DOC_DATA_GV_ANNEXE2" $DOC_DATA_GV_ANNEXE2
+    Field "DOC_DATA_GV_ANNEXE3" $DOC_DATA_GV_ANNEXE3
+    Field "DOC_DATA_GV_CODE_VILETACOM" $DOC_DATA_GV_CODE_VILETACOM
+    Field "DOC_DATA_GV_VILETACOM" $DOC_DATA_GV_VILETACOM
+    Field "DOC_DATA_WA_BANKOUT-IBAN" $DOC_DATA_WA_BANKOUT_IBAN
+    Field "DOC_DATA_GV_BPTAXNUM" $DOC_DATA_GV_BPTAXNUM
+    Field "BVR_GV_DEMREMB" $BVR_GV_DEMREMB
+    Field "ADR_GV_ADR1" $ADR_GV_ADR1
+    Field "ADR_GV_ADR2" $ADR_GV_ADR2
+    Field "ADR_GV_ADR3" $ADR_GV_ADR3
+    Field "ADR_GV_ADR4" $ADR_GV_ADR4
+    Field "ADR_GV_ADR5" $ADR_GV_ADR5
+    Field "ADR_GV_ADR6" $ADR_GV_ADR6
+    Field "ADR_GV_ADR7" $ADR_GV_ADR7
+    Field "DOC_DATA_GV_ADR_MAIL" $DOC_DATA_GV_ADR_MAIL
+
+    Field "MAIN_GV_EXONERE" $MAIN_GV_EXONERE
+    Field "MAIN_GV_TVA1-BASE" $MAIN_GV_TVA1_BASE Format "Nk=,d=."
+    Field "MAIN_GV_TVA1-TAUX" $MAIN_GV_TVA1_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA1-TAXE" $MAIN_GV_TVA1_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA2-BASE" $MAIN_GV_TVA2_BASE Format "Nk=,d=."
+    Field "MAIN_GV_TVA2-TAUX" $MAIN_GV_TVA2_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA2-TAXE" $MAIN_GV_TVA2_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA3-BASE" $MAIN_GV_TVA3_BASE Format "Nk=,d=."
+    Field "MAIN_GV_TVA3-TAUX" $MAIN_GV_TVA3_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA3-TAXE" $MAIN_GV_TVA3_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA4-BASE" $MAIN_GV_TVA4_BASE Format "Nk=,d=."
+    Field "MAIN_GV_TVA4-TAUX" $MAIN_GV_TVA4_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA4-TAXE" $MAIN_GV_TVA4_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA5-BASE" $MAIN_GV_TVA5_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA5-TAUX" $MAIN_GV_TVA5_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA5-TAXE" $MAIN_GV_TVA5_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA6-BASE" $MAIN_GV_TVA6_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA6-TAUX" $MAIN_GV_TVA6_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA6-TAXE" $MAIN_GV_TVA6_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA7-BASE" $MAIN_GV_TVA7_TAXE Format "Nk=,d=."
+    Field "MAIN_GV_TVA7-TAUX" $MAIN_GV_TVA7_TAUX Format "Nk=,d=."
+    Field "MAIN_GV_TVA7-TAXE" $MAIN_GV_TVA7_TAXE Format "Nk=,d=."
+    Field "HEAD_GV_COMPL_TITRE" $HEAD_GV_COMPL_TITRE
+    Block "Recap_Taxes" Prio 10
+      Field "MAIN_GV_TAXE01-FORMAT" $MAIN_GV_TAXE01_FORMAT
+      Field "MAIN_GV_TAXE01-GROUPE" $MAIN_GV_TAXE01_GROUPE
+      Field "MAIN_GV_TAXE01-LIB_TAXE" $MAIN_GV_TAXE01_LIB_TAXE
+      Field "MAIN_GV_TAXE02-FORMAT" $MAIN_GV_TAXE02_FORMAT
+      Field "MAIN_GV_TAXE02-GROUPE" $MAIN_GV_TAXE02_GROUPE
+      Field "MAIN_GV_TAXE02-LIB_TAXE" $MAIN_GV_TAXE02_LIB_TAXE
+      Field "MAIN_GV_TAXE03-FORMAT" $MAIN_GV_TAXE03_FORMAT
+      Field "MAIN_GV_TAXE03-GROUPE" $MAIN_GV_TAXE03_GROUPE
+      Field "MAIN_GV_TAXE03-LIB_TAXE" $MAIN_GV_TAXE03_LIB_TAXE
+      Field "MAIN_GV_TAXE04-FORMAT" $MAIN_GV_TAXE04_FORMAT
+      Field "MAIN_GV_TAXE04-GROUPE" $MAIN_GV_TAXE04_GROUPE
+      Field "MAIN_GV_TAXE04-LIB_TAXE" $MAIN_GV_TAXE04_LIB_TAXE
+      Field "MAIN_GV_TAXE05-FORMAT" $MAIN_GV_TAXE05_FORMAT
+      Field "MAIN_GV_TAXE05-GROUPE" $MAIN_GV_TAXE05_GROUPE
+      Field "MAIN_GV_TAXE05-LIB_TAXE" $MAIN_GV_TAXE05_LIB_TAXE
+      Field "MAIN_GV_TAXE06-FORMAT" $MAIN_GV_TAXE06_FORMAT
+      Field "MAIN_GV_TAXE06-GROUPE" $MAIN_GV_TAXE06_GROUPE
+      Field "MAIN_GV_TAXE06-LIB_TAXE" $MAIN_GV_TAXE06_LIB_TAXE
+      Field "MAIN_GV_TAXE07-FORMAT" $MAIN_GV_TAXE07_FORMAT
+      Field "MAIN_GV_TAXE07-GROUPE" $MAIN_GV_TAXE07_GROUPE
+      Field "MAIN_GV_TAXE07-LIB_TAXE" $MAIN_GV_TAXE07_LIB_TAXE
+      Field "MAIN_GV_TAXE08-FORMAT" $MAIN_GV_TAXE08_FORMAT
+      Field "MAIN_GV_TAXE08-GROUPE" $MAIN_GV_TAXE08_GROUPE
+      Field "MAIN_GV_TAXE08-LIB_TAXE" $MAIN_GV_TAXE08_LIB_TAXE
+      Field "MAIN_GV_TAXE09-FORMAT" $MAIN_GV_TAXE09_FORMAT
+      Field "MAIN_GV_TAXE09-GROUPE" $MAIN_GV_TAXE09_GROUPE
+      Field "MAIN_GV_TAXE09-LIB_TAXE" $MAIN_GV_TAXE09_LIB_TAXE
+      Field "MAIN_GV_TAXE10-FORMAT" $MAIN_GV_TAXE10_FORMAT
+      Field "MAIN_GV_TAXE10-GROUPE" $MAIN_GV_TAXE10_GROUPE
+      Field "MAIN_GV_TAXE10-LIB_TAXE" $MAIN_GV_TAXE10_LIB_TAXE
+    End
+    Block "ServiceClient"
+      Block "ServiceTel"
+        Field "HEAD_P_SERVSIG" $HEAD_P_SERVSIG
+        Field "HEAD_P_TELSIG" $HEAD_P_TELSIG
+      End
+      Block "Ouv1"
+        Field "HEAD_P_OUV01"
+      End
+      Block "Ouv2"
+        Field "HEAD_P_OUV02"
+      End
+      Block "Ouv3"
+        Field "HEAD_P_OUV03"
+      End
+      Block "URLsig"
+        Field "HEAD_P_WWW" $HEAD_P_WWW
+        Field "HEAD_P_ADRINT" $HEAD_P_ADRINT
+      End
+    End
+    Block "Recap_Consommation" Prio 700 UsePriority
+      Field "MAIN_GV_CONS_01-DTE_DEB"
+      Field "MAIN_GV_CONS_01-DTE_FIN"
+      Field "MAIN_GV_CONS_01-HP" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_01-HC" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_01-O" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_01-G" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_01-C" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_02-DTE_DEB"
+      Field "MAIN_GV_CONS_02-DTE_FIN"
+      Field "MAIN_GV_CONS_02-HP" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_02-HC" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_02-O" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_02-G" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_02-C" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_03-DTE_DEB"
+      Field "MAIN_GV_CONS_03-DTE_FIN"
+      Field "MAIN_GV_CONS_03-HP" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_03-HC" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_03-O" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_03-G" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_03-C" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_04-DTE_DEB"
+      Field "MAIN_GV_CONS_04-DTE_FIN"
+      Field "MAIN_GV_CONS_04-HP" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_04-HC" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_04-O" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_04-G" Format "Nk=,d=."
+      Field "MAIN_GV_CONS_04-C" Format "Nk=,d=."
+    End
+    Block "Adresse"
+    End
+    Block "BVR" UsePriority
+      Field "BVR_WA_PAYMO-MREFN" $BVR_WA_PAYMO_MREFN
+      Field "BVR_GV_REF_BVR" $BVR_GV_REF_BVR
+      Field "BVR_WA_PAYMO-NUMBER" $BVR_WA_PAYMO_NUMBER
+      Field "BVR_WA_PAYMO-DECIMAL" $BVR_WA_PAYMO_DECIMAL
+      Field "BVR_WA_PAYMO-MKODZ" $BVR_WA_PAYMO_MKODZ
+      Field "BVR_GV_TEXTE_BVR" $BVR_GV_TEXTE_BVR
+    End
+    Block "Conso_Electricite"
+      Field "MAIN_GV_01-TEXTE" $MAIN_GV_01_TEXTE
+      Field "MAIN_GV_01-NET" $MAIN_GV_01_NET Format "Nk=,d=."
+    End
+    Block "Conso_Gaz"
+      Field "MAIN_GV_02-TEXTE" $MAIN_GV_02_TEXTE
+      Field "MAIN_GV_02-NET" $MAIN_GV_02_NET Format "Nk=,d=."
+    End
+    Block "Conso_Eau"
+      Field "MAIN_GV_03-TEXTE" $MAIN_GV_03_TEXTE
+      Field "MAIN_GV_03-NET" $MAIN_GV_03_NET Format "Nk=,d=."
+    End
+    Block "Conso_Chaleur"
+      Field "MAIN_GV_05-TEXTE" $MAIN_GV_05_TEXTE
+      Field "MAIN_GV_05-NET" $MAIN_GV_05_NET Format "Nk=,d=."
+    End
+    Block "Conso_Services"
+      Field "MAIN_GV_10-TEXTE" $MAIN_GV_10_TEXTE
+      Field "MAIN_GV_10-NET" $MAIN_GV_10_NET Format "Nk=,d=."
+    End
+    Block "Conso_Ecritures"
+      Field "MAIN_GV_99-TEXTE" $MAIN_GV_99_TEXTE
+      Field "MAIN_GV_99-NET" $MAIN_GV_99_NET Keepsp Format "Nk=,d=."
+    End
+    Block "Conso Autres"
+      Field "MAIN_GV_AUTRE-TEXTE" $MAIN_GV_AUTRE_TEXTE
+      Field "MAIN_GV_AUTRE-NET" $MAIN_GV_AUTRE_NET Format "Nk=,d=."
+    End
+    Block "Conso_Report"
+      Field "MAIN_GV_98-TEXTE" $MAIN_GV_98_TEXTE
+      Field "MAIN_GV_98-NET" $MAIN_GV_98_NET Format "Nk=,d=."
+    End
+    Block "Conso_Total"
+      Field "MAIN_GV_TOTAL_TEXTE" $MAIN_GV_TOTAL_TEXTE
+      Field "MAIN_GV_TOTAL" $MAIN_GV_TOTAL Format "Nk=,d=."
+    End
+    Block "TexteFactureManuelle"
+      Field "MAIN_WA_IDE_TEXT_H-TEXT" $MAIN_WA_IDE_TEXT_H_TEXT
+    End
+    Block "Contrat" Prio 1 UsePriority
+      Field "MAIN_WA_CONTRACT-VBEZ" $MAIN_WA_CONTRACT_VBEZ
+      Field "MAIN_WA_DOC_ITEM-VERTRAG" $MAIN_WA_DOC_ITEM_VERTRAG Format "Nk=,d=."
+      Field "MAIN_GV_LIB_SECTEUR" $MAIN_GV_LIB_SECTEUR
+      Field "MAIN_WA_PR_ADDRESS-CITY1" $MAIN_WA_PR_ADDRESS_CITY1
+      Field "MAIN_WA_PR_ADDRESS-STREET" $MAIN_WA_PR_ADDRESS_STREET
+      Field "MAIN_WA_PR_ADDRESS-HOUSE_NUM1" $MAIN_WA_PR_ADDRESS_HOUSE_NUM1
+      Field "MAIN_WA_PR_ADDRESS-HOUSE_NUM2" $MAIN_WA_PR_ADDRESS_HOUSE_NUM2
+      Field "MAIN_WA_DOC_ITEM-AB" $MAIN_WA_DOC_ITEM_AB Format "Ddd.mm.yyyy"
+      Field "MAIN_WA_DOC_ITEM-BIS" $MAIN_WA_DOC_ITEM_BIS Format "Ddd.mm.yyyy"
+      Field "MAIN_WA_INSTALL-ANLAGE" $MAIN_WA_INSTALL_ANLAGE
+      Field "MAIN_WA_PREMISE-VSTELLE" $MAIN_WA_PREMISE_VSTELLE
+      Field "MAIN_WA_PR_ADDRESS-FLOOR" $MAIN_WA_PR_ADDRESS_FLOOR
+      Field "MAIN_WA_PREMISE-LGZUSATZ" $MAIN_WA_PREMISE_LGZUSATZ
+      Field "MAIN_WA_RATE_T-TARIFBEZ" $MAIN_WA_RATE_T_TARIFBEZ
+      Field "MAIN_GV_TARIFTYP" $MAIN_WA_RATE_CAT_TARIFTYP
+      Field "MAIN_GV_CRELEVE" $MAIN_GV_CRELEVE
+      Field "MAIN_GV_CTR_DEB" $MAIN_GV_CTR_DEB Format "Ddd.mm.yyyy"
+      Field "MAIN_GV_CTR_FIN" $MAIN_GV_CTR_FIN Format "Ddd.mm.yyyy"
+      Field "MAIN_GV_CTR_NJOUR" $MAIN_GV_CTR_NJOUR Format "Nk=,d=."
+      Field "MAIN_GV_PDC" $MAIN_GV_PDC
+      Field "MAIN_GV_TTYPBEZ" $MAIN_GV_TTYPBEZ
+      Field "MAIN_GV_INDIC_PCT" $MAIN_GV_INDIC_PCT
+      Field "MAIN_GV_USE_RTP" $MAIN_GV_USE_RTP
+      Field "MAIN_GV_35P" $MAIN_GV_35P
+      Block "Contrat_Releve" Prio 1
+        Field "MAIN_GV_FORMAT_QTE" $MAIN_GV_FORMAT_QTE
+        Field "MAIN_GT_TRI-LIBELLE" $MAIN_GT_TRI_LIBELLE
+        Field "MAIN_WA_DOC_ITEM-BELZART" $MAIN_WA_DOC_ITEM_BELZART
+        Field "MAIN_WA_DOC_ITEM-GERAET" $MAIN_WA_DOC_ITEM_GERAET Format "Nk=,d=."
+        Field "MAIN_WA_DOC_ITEM-I_ZWSTVOR" $MAIN_WA_DOC_ITEM_I_ZWSTVOR Format "Nk=,d=."
+        Field "MAIN_WA_DOC_ITEM-I_ZWSTNDAB" $MAIN_WA_DOC_ITEM_I_ZWSTNDAB Format "Nk=,d=."
+        Field "MAIN_WA_DOC_ITEM-I_ABRMENGE" $MAIN_WA_DOC_ITEM_I_ABRMENGE Format "Nk=,d=."
+        Field "MAIN_GV_NB_DEC" $MAIN_GV_NB_DEC
+        Field "MAIN_WA_MEAS_UNITT-MSEH6" $MAIN_WA_MEAS_UNITT_MSEH6
+        Field "MAIN_WA_DOC_ITEM-MASSBILL" $MAIN_WA_DOC_ITEM_MASSBILL
+        Field "MAIN_WA_DOC_ITEM-ZWNUMMER" $MAIN_WA_DOC_ITEM_ZWNUMMER Format "Nk=,d=."
+        Field "MAIN_FV_IDX_OLD" $MAIN_FV_IDX_OLD
+        Field "MAIN_FV_IDX_OLD_NUM" $MAIN_FV_IDX_OLD_NUM Format "Ddd.mm.yyyy"
+        Field "MAIN_FV_IDX_NEW" $MAIN_FV_IDX_NEW
+        Field "MAIN_WA_DOC_ITEM-TARIFTYP" $MAIN_WA_DOC_ITEM_TARIFTYP
+        Field "MAIN_FV_DEGRE" $MAIN_FV_DEGRE Format "Nk=,d=."
+        Field "MAIN_GV_DEPOSE" $MAIN_GV_DEPOSE
+        Field "MAIN_WA_DOC_ITEM-TARIFNR" $MAIN_WA_DOC_ITEM_TARIFNR
+        Field "MAIN_GV_BASE_AN" $MAIN_GV_BASE_AN
+        Field "MAIN_FV_IDX_NEW_NUM" $MAIN_FV_IDX_NEW_NUM Format "Ddd.mm.yyyy"
+        Field "MAIN_FV_LIG_NJOUR" $MAIN_FV_LIG_NJOUR Format "Nk=,d=."
+        Field "MAIN_GV_INDIC_HPHC" $MAIN_GV_INDIC_HPHC
+        Field "MAIN_GV_ETOILE" $MAIN_GV_ETOILE
+        Field "MAIN_GV_ETOILE_LIB" $MAIN_GV_ETOILE_LIB
+        Field "MAIN_GV_NOQTE" $MAIN_GV_NOQTE
+        Field "MAIN_GV_PMAXM" $MAIN_GV_PMAXM Format "Nk=,d=."
+        Field "MAIN_GV_UPMAXM" $MAIN_GV_UPMAXM
+        Field "MAIN_GV_PMAXL" $MAIN_GV_PMAXL Format "Nk=,d=."
+        Field "MAIN_GV_UPMAXL" $MAIN_GV_UPMAXL
+        Field "MAIN_GV_MOISREF" $MAIN_GV_MOISREF
+      End
+      Block "Contrat_Reactive" Prio 2 UsePriority
+        Field "MAIN_FV_LIB_ER" $MAIN_FV_LIB_ER
+        Field "MAIN_FV_QTE_EP" $MAIN_FV_QTE_EP
+        Field "MAIN_FV_QTE_ER" $MAIN_FV_QTE_ER Format "Nk=,d=."
+        Field "MAIN_FV_QTE_EA" $MAIN_FV_QTE_EA Format "Nk=,d=."
+        Field "MAIN_FV_QTE_EL" $MAIN_FV_QTE_EL Format "Nk=,d=."
+        Block "Contrat_Reactive_Ligne 2"
+          Field "MAIN_FV_LIB_EC" $MAIN_FV_LIB_EC
+          Field "MAIN_FV_QTE_EC" $MAIN_FV_QTE_EC Format "Nk=,d=."
+          Field "MAIN_FV_UNI_EC" $MAIN_FV_UNI_EC
+        End
+      End
+      Block "Contrat_Puissance" Prio 3 UsePriority
+        Field "MAIN_FV_LIB_PU"
+        Field "MAIN_FV_QTE_PU" $MAIN_FV_QTE_PU Format "Nk=,d=."
+        Field "MAIN_FV_UNI_PU" $MAIN_FV_UNI_PU
+      End
+      Block "Contrat_Montant" Prio 3
+        Field "MAIN_GV_FORMAT" $MAIN_GV_FORMAT
+        Field "MAIN_GS_CODE_TRI" $MAIN_GS_CODE_TRI
+        Field "MAIN_GV_DEJAFACT" $MAIN_GV_DEJAFACT
+        Field "MAIN_FV_LIB_MNT" $MAIN_FV_LIB_MNT
+        Field "MAIN_GT_TRI-TYPE_LIGNE" $MAIN_GT_TRI_TYPE_LIGNE
+        Field "MAIN_FV_JRS_MNT" $MAIN_FV_JRS_MNT Format "Nk=,d=."
+        Field "MAIN_FV_UNT_MNT" $MAIN_FV_UNT_MNT
+        Field "MAIN_FV_QTE_MNT" $MAIN_FV_QTE_MNT Format "Nk=,d=."
+        Field "MAIN_FV_UNI_MNT" $MAIN_FV_UNI_MNT
+        Field "MAIN_FV_PRX_MNT" $MAIN_FV_PRX_MNT Format "Nk=,d=."
+        Field "MAIN_FV_NET_MNT" $MAIN_FV_NET_MNT Format "Nk=,d=."
+        Field "MAIN_FV_COD_TVA" $MAIN_FV_COD_TVA Format "Nk=,d=."
+        Field "MAIN_FV_TTC_MNT" $MAIN_FV_TTC_MNT Format "Nk=,d=."
+        Field "MAIN_GV_PRX_DEB" $MAIN_GV_PRX_DEB Format "Ddd.mm.yyyy"
+        Field "MAIN_GV_PRX_FIN" $MAIN_GV_PRX_FIN Format "Ddd.mm.yyyy"
+        Field "MAIN_GV_TXT_INFO" $MAIN_GV_TXT_INFO
+        Field "MAIN_GV_LIB_TARIF" $MAIN_GV_LIB_TARIF
+        Field "MAIN_WA_DOC_ITEM-CLE_TARIF" $MAIN_WA_DOC_ITEM_CLE_TARIF
+      End
+      Block "Contrat_Rabais" Prio 4
+        Field "MAIN_FV_CDJ_RAB" $MAIN_FV_CDJ_RAB
+        Field "MAIN_FV_LIB_RAB" $MAIN_FV_LIB_RAB
+        Field "MAIN_FV_TYP_RAB" $MAIN_FV_TYP_RAB
+        Field "MAIN_FV_TX_RAB" $MAIN_FV_TX_RAB Format "Nk=,d=."
+        Field "MAIN_FV_BAS_RAB" $MAIN_FV_BAS_RAB Format "Nk=,d=."
+        Field "MAIN_FV_NET_RAB" $MAIN_FV_NET_RAB Format "Nk=,d=."
+        Field "MAIN_FV_TTC_RAB" $MAIN_FV_TTC_RAB Format "Nk=,d=."
+        Field "MAIN_FV_TVA_RAB" $MAIN_FV_TVA_RAB Format "Nk=,d=."
+      End
+      Block "Contrat_Info" Prio 5
+        Field "MAIN_GV_INFO_LIB"
+        Field "MAIN_GV_INFO_PRIX"
+      End
+      Block "Contrat_Fin" Prio 10
+        Field "MAIN_FIN_CONTR" $MAIN_FIN_CONTR
+      End
+      Block "Deductions" Prio 11
+        Block "Deduction Ligne 01"
+          Field "MAIN_GV_F01-PRINTDOC" $MAIN_GV_F01_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F01-BELEGDAT" $MAIN_GV_F01_BELEGDAT
+          Field "MAIN_GV_F01-MNTTTC" $MAIN_GV_F01_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_02"
+          Field "MAIN_GV_F02-PRINTDOC" $MAIN_GV_F02_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F02-BELEGDAT" $MAIN_GV_F02_BELEGDAT
+          Field "MAIN_GV_F02-MNTTTC" $MAIN_GV_F02_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_03"
+          Field "MAIN_GV_F03-PRINTDOC" $MAIN_GV_F03_PRINTDOC
+          Field "MAIN_GV_F03-BELEGDAT" $MAIN_GV_F03_BELEGDAT
+          Field "MAIN_GV_F03-MNTTTC" $MAIN_GV_F03_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_04"
+          Field "MAIN_GV_F04-PRINTDOC" $MAIN_GV_F04_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F04-BELEGDAT" $MAIN_GV_F04_BELEGDAT
+          Field "MAIN_GV_F04-MNTTTC" $MAIN_GV_F04_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_05"
+          Field "MAIN_GV_F05-PRINTDOC" $MAIN_GV_F05_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F05-BELEGDAT" $MAIN_GV_F05_BELEGDAT
+          Field "MAIN_GV_F05-MNTTTC" $MAIN_GV_F05_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_06"
+          Field "MAIN_GV_F06-PRINTDOC" $MAIN_GV_F06_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F06-BELEGDAT" $MAIN_GV_F06_BELEGDAT
+          Field "MAIN_GV_F06-MNTTTC" $MAIN_GV_F06_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_07"
+          Field "MAIN_GV_F07-PRINTDOC" $MAIN_GV_F07_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F07-BELEGDAT" $MAIN_GV_F07_BELEGDAT
+          Field "MAIN_GV_F07-MNTTTC" $MAIN_GV_F07_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_08"
+          Field "MAIN_GV_F08-PRINTDOC" $MAIN_GV_F08_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F08-BELEGDAT" $MAIN_GV_F08_BELEGDAT
+          Field "MAIN_GV_F08-MNTTTC" $MAIN_GV_F08_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_09"
+          Field "MAIN_GV_F09-PRINTDOC" $MAIN_GV_F09_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F09-BELEGDAT" $MAIN_GV_F09_BELEGDAT
+          Field "MAIN_GV_F09-MNTTTC" $MAIN_GV_F09_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_10"
+          Field "MAIN_GV_F10-PRINTDOC" $MAIN_GV_F10_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F10-BELEGDAT" $MAIN_GV_F10_BELEGDAT
+          Field "MAIN_GV_F10-MNTTTC" $MAIN_GV_F10_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_11"
+          Field "MAIN_GV_F11-PRINTDOC" $MAIN_GV_F11_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F11-BELEGDAT" $MAIN_GV_F11_BELEGDAT
+          Field "MAIN_GV_F11-MNTTTC" $MAIN_GV_F11_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_12"
+          Field "MAIN_GV_F12-PRINTDOC" $MAIN_GV_F12_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F12-BELEGDAT" $MAIN_GV_F12_BELEGDAT
+          Field "MAIN_GV_F12-MNTTTC" $MAIN_GV_F12_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_13"
+          Field "MAIN_GV_F13-PRINTDOC" $MAIN_GV_F13_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F13-BELEGDAT" $MAIN_GV_F13_BELEGDAT
+          Field "MAIN_GV_F13-MNTTTC" $MAIN_GV_F13_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_14"
+          Field "MAIN_GV_F14-PRINTDOC" $MAIN_GV_F14_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F14-BELEGDAT" $MAIN_GV_F14_BELEGDAT
+          Field "MAIN_GV_F14-MNTTTC" $MAIN_GV_F14_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_15"
+          Field "MAIN_GV_F15-PRINTDOC" $MAIN_GV_F15_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F15-BELEGDAT" $MAIN_GV_F15_BELEGDAT
+          Field "MAIN_GV_F15-MNTTTC" $MAIN_GV_F15_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_16"
+          Field "MAIN_GV_F16-PRINTDOC" $MAIN_GV_F16_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F16-BELEGDAT" $MAIN_GV_F16_BELEGDAT
+          Field "MAIN_GV_F16-MNTTTC" $MAIN_GV_F16_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_17"
+          Field "MAIN_GV_F17-PRINTDOC" $MAIN_GV_F17_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F17-BELEGDAT" $MAIN_GV_F17_BELEGDAT
+          Field "MAIN_GV_F17-MNTTTC" $MAIN_GV_F17_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_18"
+          Field "MAIN_GV_F18-PRINTDOC" $MAIN_GV_F18_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F18-BELEGDAT" $MAIN_GV_F18_BELEGDAT
+          Field "MAIN_GV_F18-MNTTTC" $MAIN_GV_F18_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_19"
+          Field "MAIN_GV_F19-PRINTDOC" $MAIN_GV_F19_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F19-BELEGDAT" $MAIN_GV_F19_BELEGDAT
+          Field "MAIN_GV_F19-MNTTTC" $MAIN_GV_F19_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_20"
+          Field "MAIN_GV_F20-PRINTDOC" $MAIN_GV_F20_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F20-BELEGDAT" $MAIN_GV_F20_BELEGDAT
+          Field "MAIN_GV_F20-MNTTTC" $MAIN_GV_F20_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_21"
+          Field "MAIN_GV_F21-PRINTDOC" $MAIN_GV_F21_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F21-BELEGDAT" $MAIN_GV_F21_BELEGDAT
+          Field "MAIN_GV_F21-MNTTTC" $MAIN_GV_F21_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_22"
+          Field "MAIN_GV_F22-PRINTDOC" $MAIN_GV_F22_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F22-BELEGDAT" $MAIN_GV_F22_BELEGDAT
+          Field "MAIN_GV_F22-MNTTTC" $MAIN_GV_F22_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_23"
+          Field "MAIN_GV_F23-PRINTDOC" $MAIN_GV_F23_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F23-BELEGDAT" $MAIN_GV_F23_BELEGDAT
+          Field "MAIN_GV_F23-MNTTTC" $MAIN_GV_F23_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_24"
+          Field "MAIN_GV_F24-PRINTDOC" $MAIN_GV_F24_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F24-BELEGDAT" $MAIN_GV_F24_BELEGDAT
+          Field "MAIN_GV_F24-MNTTTC" $MAIN_GV_F24_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_25"
+          Field "MAIN_GV_F25-PRINTDOC" $MAIN_GV_F25_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F25-BELEGDAT" $MAIN_GV_F25_BELEGDAT
+          Field "MAIN_GV_F25-MNTTTC" $MAIN_GV_F25_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_26"
+          Field "MAIN_GV_F26-PRINTDOC" $MAIN_GV_F26_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F26-BELEGDAT" $MAIN_GV_F26_BELEGDAT
+          Field "MAIN_GV_F26-MNTTTC" $MAIN_GV_F26_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_27"
+          Field "MAIN_GV_F27-PRINTDOC" $MAIN_GV_F27_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F27-BELEGDAT" $MAIN_GV_F27_BELEGDAT
+          Field "MAIN_GV_F27-MNTTTC" $MAIN_GV_F27_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_28"
+          Field "MAIN_GV_F28-PRINTDOC" $MAIN_GV_F28_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F28-BELEGDAT" $MAIN_GV_F28_BELEGDAT
+          Field "MAIN_GV_F28-MNTTTC" $MAIN_GV_F28_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_29"
+          Field "MAIN_GV_F29-PRINTDOC" $MAIN_GV_F29_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F29-BELEGDAT" $MAIN_GV_F29_BELEGDAT
+          Field "MAIN_GV_F29-MNTTTC" $MAIN_GV_F29_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_30"
+          Field "MAIN_GV_F30-PRINTDOC" $MAIN_GV_F30_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F30-BELEGDAT" $MAIN_GV_F30_BELEGDAT
+          Field "MAIN_GV_F30-MNTTTC" $MAIN_GV_F30_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_31"
+          Field "MAIN_GV_F31-PRINTDOC" $MAIN_GV_F31_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F31-BELEGDAT" $MAIN_GV_F31_BELEGDAT
+          Field "MAIN_GV_F31-MNTTTC" $MAIN_GV_F31_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_32"
+          Field "MAIN_GV_F32-PRINTDOC" $MAIN_GV_F32_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F32-BELEGDAT" $MAIN_GV_F32_BELEGDAT
+          Field "MAIN_GV_F32-MNTTTC" $MAIN_GV_F32_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_33"
+          Field "MAIN_GV_F33-PRINTDOC" $MAIN_GV_F33_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F33-BELEGDAT" $MAIN_GV_F33_BELEGDAT
+          Field "MAIN_GV_F33-MNTTTC" $MAIN_GV_F33_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_34"
+          Field "MAIN_GV_F34-PRINTDOC" $MAIN_GV_F34_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F34-BELEGDAT" $MAIN_GV_F34_BELEGDAT
+          Field "MAIN_GV_F34-MNTTTC" $MAIN_GV_F34_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_35"
+          Field "MAIN_GV_F35-PRINTDOC" $MAIN_GV_F35_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F35-BELEGDAT" $MAIN_GV_F35_BELEGDAT
+          Field "MAIN_GV_F35-MNTTTC" $MAIN_GV_F35_MNTTTC Format "Nk=,d=."
+        End
+        Block "Deduction_Ligne_36"
+          Field "MAIN_GV_F36-PRINTDOC" $MAIN_GV_F36_PRINTDOC Format "Nk=,d=."
+          Field "MAIN_GV_F36-BELEGDAT" $MAIN_GV_F36_BELEGDAT
+          Field "MAIN_GV_F36-MNTTTC" $MAIN_GV_F36_MNTTTC Format "Nk=,d=."
+        End
+      End
+      Block "Contrat_TVA" Prio 12
+        Field "MAIN_FV_LIB_TVA" $MAIN_FV_LIB_TVA
+        Field "MAIN_WA_DOC_ITEM-STPRZ" $MAIN_WA_DOC_ITEM_STPRZ Format "Nk=,d=."
+        Field "MAIN_FV_SOUMIS_TVA" $MAIN_FV_SOUMIS_TVA Format "Nk=,d=."
+        Field "MAIN_FV_NET_TVA" $MAIN_FV_NET_TVA Format "Nk=,d=."
+        Field "MAIN_LIB_SPARTE" $MAIN_LIB_SPARTE
+        Field "MAIN_GV_TOT_HT" $MAIN_GV_TOT_HT Format "Nk=,d=."
+        Field "MAIN_GV_TOT_TVA" $MAIN_GV_TOT_TVA Format "Nk=,d=."
+        Field "MAIN_GV_TOT_TTC" $MAIN_GV_TOT_TTC Format "Nk=,d=."
+        Field "MAIN_FV_SSTOT_TTC" Format "Nk=,d=."
+        Block "LibCO2"
+          Field "MAIN_GV_TAXE_CO2" $MAIN_GV_TAXE_CO2
+        End
+      End
+      Block "Contrat_Recap_Quantite" Prio 99 UsePriority
+        Block "Contrat_Recap 01"
+          Field "MAIN_GV_Q01-LIBELLE" $MAIN_GV_Q01_LIBELLE
+          Field "MAIN_GV_Q01-QTE_TOT" $MAIN_GV_Q01_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q01-QTE_FAC" $MAIN_GV_Q01_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q01-SOLDE" $MAIN_GV_Q01_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q01-UNITE" $MAIN_GV_Q01_UNITE
+        End
+        Block "Contrat_Recap_02"
+          Field "MAIN_GV_Q02-LIBELLE" $MAIN_GV_Q02_LIBELLE
+          Field "MAIN_GV_Q02-QTE_TOT" $MAIN_GV_Q02_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q02-QTE_FAC" $MAIN_GV_Q02_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q02-SOLDE" $MAIN_GV_Q02_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q02-UNITE" $MAIN_GV_Q02_UNITE
+        End
+        Block "Contrat_Recap_03"
+          Field "MAIN_GV_Q03-LIBELLE" $MAIN_GV_Q03_LIBELLE
+          Field "MAIN_GV_Q03-QTE_TOT" $MAIN_GV_Q03_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q03-QTE_FAC" $MAIN_GV_Q03_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q03-SOLDE" $MAIN_GV_Q03_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q03-UNITE" $MAIN_GV_Q03_UNITE
+        End
+        Block "Contrat_Recap_04"
+          Field "MAIN_GV_Q04-LIBELLE" $MAIN_GV_Q04_LIBELLE
+          Field "MAIN_GV_Q04-QTE_TOT" $MAIN_GV_Q04_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q04-QTE_FAC" $MAIN_GV_Q04_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q04-SOLDE" $MAIN_GV_Q04_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q04-UNITE" $MAIN_GV_Q04_UNITE
+        End
+        Block "Contrat_Recap_05"
+          Field "MAIN_GV_Q05-LIBELLE" $MAIN_GV_Q05_LIBELLE
+          Field "MAIN_GV_Q05-QTE_TOT" $MAIN_GV_Q05_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q05-QTE_FAC" $MAIN_GV_Q05_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q05-SOLDE" $MAIN_GV_Q05_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q05-UNITE" $MAIN_GV_Q05_UNITE
+        End
+        Block "Contrat_Recap_06"
+          Field "MAIN_GV_Q06-LIBELLE" $MAIN_GV_Q06_LIBELLE
+          Field "MAIN_GV_Q06-QTE_TOT" $MAIN_GV_Q06_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q06-QTE_FAC" $MAIN_GV_Q06_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q06-SOLDE" $MAIN_GV_Q06_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q06-UNITE" $MAIN_GV_Q06_UNITE
+        End
+        Block "Contrat_Recap_07"
+          Field "MAIN_GV_Q07-LIBELLE" $MAIN_GV_Q07_LIBELLE
+          Field "MAIN_GV_Q07-QTE_TOT" $MAIN_GV_Q07_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q07-QTE_FAC" $MAIN_GV_Q07_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q07-SOLDE" $MAIN_GV_Q07_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q07-UNITE" $MAIN_GV_Q07_UNITE
+        End
+        Block "Contrat_Recap_08"
+          Field "MAIN_GV_Q08-LIBELLE" $MAIN_GV_Q08_LIBELLE Format "Nk=,d=."
+          Field "MAIN_GV_Q08-QTE_TOT" $MAIN_GV_Q08_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q08-QTE_FAC" $MAIN_GV_Q08_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q08-SOLDE" $MAIN_GV_Q08_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q08-UNITE" $MAIN_GV_Q08_UNITE
+        End
+        Block "Contrat_Recap_09"
+          Field "MAIN_GV_Q09-LIBELLE" $MAIN_GV_Q09_LIBELLE
+          Field "MAIN_GV_Q09-QTE_TOT" $MAIN_GV_Q09_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q09-QTE_FAC" $MAIN_GV_Q09_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q09-SOLDE" $MAIN_GV_Q09_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q09-UNITE" $MAIN_GV_Q09_UNITE
+        End
+        Block "Contrat_Recap_10"
+          Field "MAIN_GV_Q10-LIBELLE" $MAIN_GV_Q08_LIBELLE
+          Field "MAIN_GV_Q10-QTE_TOT" $MAIN_GV_Q10_QTE_TOT Format "Nk=,d=."
+          Field "MAIN_GV_Q10-QTE_FAC" $MAIN_GV_Q10_QTE_FAC Format "Nk=,d=."
+          Field "MAIN_GV_Q10-SOLDE" $MAIN_GV_Q10_SOLDE Format "Nk=,d=."
+          Field "MAIN_GV_Q10-UNITE" $MAIN_GV_Q10_UNITE
+        End
+      End
+    End
+    Block "Services" Prio 2 UsePriority
+      Field "MAIN_GV_LIB_SD" $MAIN_GV_LIB_SD
+      Field "MAIN_GV_REF_SD" $MAIN_GV_REF_SD Format "Nk=,d=."
+      Field "MAIN_GV_LIB_SERVICE" $MAIN_GV_LIB_SERVICE
+      Field "MAIN_GV_TITRE_REF_SD" $MAIN_GV_TITRE_REF_SD
+      Block "Services_Detail"
+        Field "MAIN_WA_SD_ITEM-ARKTX" $MAIN_WA_SD_ITEM_ARKTX
+        Field "MAIN_WA_SD_ITEM-NETWR" $MAIN_WA_SD_ITEM_NETWR Format "Nk=,d=."
+        Field "MAIN_WA_SD_ITEM-WAERK" $MAIN_WA_SD_ITEM_WAERK
+        Block "Services_TVA"
+          Field "MAIN_GV_TTVA" $MAIN_GV_TTVA Format "Nk=,d=."
+          Field "MAIN_WA_SD_ITEM-MWSBP" $MAIN_WA_SD_ITEM_MWSBP Format "Nk=,d=."
+          Field "MAIN_GV_MNET" $MAIN_GV_MNET Format "Nk=,d=."
+          Field "MAIN_GV_BEDAT" $MAIN_GV_BEDAT Format "Ddd.mm.yyyy"
+          Field "MAIN_GV_ENDAT" $MAIN_GV_ENDAT Format "Ddd.mm.yyyy"
+        End
+        Block "NouveauPrix"
+          Field "MAIN_GV_INFO_SD" $MAIN_GV_INFO_SD
+        End
+      End
+      Block "Services_Fin" Prio 99
+        Field "MAIN_FIN_DOCSD" $MAIN_FIN_DOCSD
+      End
+    End
+    Block "Frais" Prio 5 UsePriority
+      Block "Frais_Detail"
+        Field "MAIN_GV_CTYPE_LIGNE" $MAIN_GV_CTYPE_LIGNE
+        Field "MAIN_FV_CDJ_FRS"
+        Field "MAIN_FV_LIB_FRS" $MAIN_FV_LIB_FRS
+        Field "MAIN_FV_HT_FRS" $MAIN_FV_HT_FRS Format "Nk=,d=."
+        Field "MAIN_FV_NET_FRS" $MAIN_FV_NET_FRS Format "Nk=,d=."
+        Field "MAIN_FV_TTVA_FRS" $MAIN_FV_TTVA_FRS Format "Nk=,d=."
+        Field "MAIN_FV_MTVA_FRS" $MAIN_FV_MTVA_FRS Format "Nk=,d=."
+      End
+      Block "Frais_Fin" Prio 99
+        Field "MAIN_FIN_FRAIS" $MAIN_FIN_FRAIS
+      End
+    End
+    Block "Recap_TVA" Prio 98
+      Field "MAIN_FIN_DOC" $MAIN_FIN_DOC
+    End
+    Block "Info_Fin" Prio 800 UsePriority
+      Field "HEAD_GV_DEPOSE_DEB" $HEAD_GV_DEPOSE_DEB
+    End
+    Block "Informations_et_Communications" Prio 850
+      Block "InfCom1" Prio 850
+        Field "MAIN_GV_INFO_01" $MAIN_GV_INFO_01
+        Field "MAIN_GV_INFO_PSPD" $MAIN_GV_INFO_PSPD
+      End
+      Block "InfCom2" Prio 850
+        Field "MAIN_GV_INFO_02" $MAIN_GV_INFO_02
+      End
+      Block "InfCom3" Prio 850
+        Field "MAIN_GV_INFO_03" $MAIN_GV_INFO_03
+      End
+      Block "InfCom4" Prio 850
+        Field "MAIN_GV_INFO_04" $MAIN_GV_INFO_04
+      End
+      Block "InfCom5" Prio 850
+        Field "MAIN_GV_INFO_05" $MAIN_GV_INFO_05
+      End
+    End
+    Block "Informations_et_Communications_spéciales" Prio 875 UsePriority
+      Field "MAIN_GV_INFO_APTE" $MAIN_GV_INFO_APTE
+      Block "Info_Prix_01" Prio 876
+        Field "MAIN_GV_INFO_PRIX_01" $MAIN_GV_INFO_PRIX_01
+      End
+      Block "Info_Prix_02" Prio 877
+        Field "MAIN_GV_INFO_PRIX_02" $MAIN_GV_INFO_PRIX_02
+      End
+      Block "Info_Prix_03" Prio 878
+        Field "MAIN_GV_INFO_PRIX_03" $MAIN_GV_INFO_PRIX_03
+      End
+      Block "Info_NORM" Prio 880
+        Field "MAIN_GV_INFO_NORM" $MAIN_GV_INFO_NORM
+      End
+      Block "Info_MT" Prio 881
+        Field "MAIN_GV_INFO_MT" $MAIN_GV_INFO_MT
+      End
+      Block "Info_EAU" Prio 879
+        Field "MAIN_GV_INFO_EAU" $MAIN_GV_INFO_EAU
+      End
+    End
+    Block "Doubleco" Prio 890 UsePriority
+      Field "DOC_DATA_GV_DOUBLECO" $DOC_DATA_GV_DOUBLECO
+    End
+    Block "NOE_Transitoire" Prio 900 UsePriority
+      Field "HEAD_GV_LOI" $HEAD_GV_LOI
+    End
+    Block "IntervUrgence" Prio 999 UsePriority
+      Field "HEAD_P_URGENCE01" $HEAD_P_URGENCE01
+      Field "HEAD_P_URGENCE02" $HEAD_P_URGENCE02
+    End
+  End

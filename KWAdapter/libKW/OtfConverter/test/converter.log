@@ -1,0 +1,9 @@
+2021-03-15 15:47:13,053 INFO  OtfConverter             - Started conversion of CandidateLetter.gof
+2021-03-15 15:47:13,519 WARN  OtfCommandFormInformation04 - Ignored
+2021-03-15 15:47:13,519 WARN  OtfCommandFormInformation05 - Ignored
+2021-03-15 15:47:13,525 WARN  OtfCommandFormInformation06 - Ignored
+2021-03-15 15:47:13,623 WARN  OtfCommandFormInformation05 - Ignored
+2021-03-15 15:47:13,624 WARN  OtfCommandFormInformation06 - Ignored
+2021-03-15 15:47:13,627 WARN  OtfCommandFormInformation05 - Ignored
+2021-03-15 15:47:13,627 WARN  OtfCommandFormInformation06 - Ignored
+2021-03-15 15:47:13,639 INFO  OtfConverter             - Finished conversion of CandidateLetter.gof. Result written to CandidateLetter.mfd. Time needed: 578 ms.

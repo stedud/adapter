@@ -1,0 +1,47 @@
+Event "PreformatIN first"
+PageIn
+// MessageID "-1300437856"
+
+DynamicOverlay
+       Field "ModulKern" 14 510 26 520 $OMR Keepsp;
+ Field "GV_TYPE_COURRIER" 17 7 21 11 $GV_TYPE_COURRIER;
+ Field "InvoiceID" 34 2 90 17 $InvoiceID;
+ Field "Mail_Destinataire" 383 61 455 65 $Mail_Destinataire;
+ Field "PartnerID" 418 213 502 225 $PartnerID;
+ Field "CompteID" 417 228 502 238 $CompteID;
+ Field "Date_Facture" 417 249 503 263 $Date_Facture;
+ Field "Num_Page" 536 70 560 83 $Num_Page;
+ Field "FirstPage" 109 310 176 330 $FirstPage;
+  Field "client_num" 176 749 597 843;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+     <page size="595.3,841.9" rule="Pattern" xoffset="15" order="1" type="FIRST">
+    <pattern name="Pattern" position="110.0,35.0" size="122.0,14.0" options="276" match="(.*|^|\s)Service Clients SIG"/>
+	
+	   
+    <field name="ModulKern" position="13.0,509.0" size="12.0,10.0" variable="OMR" options="17"/>
+    <field name="GV_TYPE_COURRIER" description="Type E(mail) P(apier)" position="16.0,6.0" size="4.0,4.0" variable="GV_TYPE_COURRIER" options="21"/>
+	<field name="InvoiceID" description="No de client" position="34.0,2.8" size="55.9,14.2" variable="InvoiceID" options="21"/>
+    <field name="Mail_Destinataire" position="80.0,6.0" size="100.0,12.0" variable="Mail_Destinataire" options="21"/>
+    <field name="PartnerID" description="No de client" position="417.0,212.0" size="84.0,12.0" variable="PartnerID" options="20"/>
+    <field name="CompteID" description="No de compte de contrats" position="416.0,227.0" size="85.0,10.0" variable="CompteID" options="20"/>
+    <field name="Date_Facture" description="Date de la facture" position="416.0,248.0" size="86.0,14.0" variable="Date_Facture" options="20"/>
+    <field name="Num_Page" position="535.0,69.0" size="24.0,13.0" variable="Num_Page" options="20"/>
+    <field name="FirstPage" description="Identification de la première page" position="108.0,309.0" size="67.0,20.0" variable="FirstPage" options="20"/>
+	<field name="QR" position="180.0,590.0" size="160.0,150.0" variable="QR" options="21"><![CDATA[	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\n","");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\r","");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\\c013\\","/r");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\\c010\\","/n");	return QR;]]></field>
+	
+    </page>
+	<page size="595.3,841.9" rule="NOT Pattern" order="1" xoffset="15" type="NEXT">
+		<pattern name="Pattern" position="110.0,34.0" size="122.0,17.0" options="276" match="(.*|^|\s)Service Clients SIG"/>
+	
+	</page>
+    </s-lxfin>
+       End
+    End
+
+End
+

@@ -1,0 +1,21 @@
+Event "PreformatIN"
+PageIn
+// MessageID "1631712"
+
+DynamicOverlay
+    Field "champs1" 138 241 310 259;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd" >
+    
+    <s-lxfin>
+    <page size="595.3,841.9" rule="NOT pattern" order="1" xoffset="20">
+    <pattern name="pattern" position="7.0,6.0" size="12.0,11.0" options="276" match="NEVER_MATCH"/>
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+   <date>2025-08-04</date>
+   <fr_kw_adapter_document_Datasource_54f4a7f0Name>INTEST_STAMPA</fr_kw_adapter_document_Datasource_54f4a7f0Name>
+   <originBaseName>bphom_spool</originBaseName>
+   <_date>2025-08-04</_date>
+   <inputFileName>bphom_spool.txt</inputFileName>
+   <originFileName>bphom_spool.txt</originFileName>
+   <docId>bphom_spool.txt_INTEST_STAMPA_2</docId>
+   <docType>INTEST_STAMPA</docType>
+   <origin>bphom_spool.txt</origin>
+   <docIdx>2</docIdx>
+   <originExtension>txt</originExtension>
+   <_docType>INTEST_STAMPA</_docType>
+   <INTEST_STAMPA>
+      <INTEST_STAMPA>
+         <Stampa_Intestaz__BEE_/>
+      </INTEST_STAMPA>
+   </INTEST_STAMPA>
+   <jobId>c:\Temp\bphom_spool.txt</jobId>
+   <inputFile>c:\Temp\bphom_spool.txt</inputFile>
+   <_docNum>2</_docNum>
+   <environment/>
+   <name>INTEST_STAMPA</name>
+   <time>09-57-06</time>
+   <_time>09-57-06</_time>
+   <timestamp>1754294226606</timestamp>
+</context>

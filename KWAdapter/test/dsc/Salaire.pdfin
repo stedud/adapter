@@ -1,0 +1,33 @@
+Event "Salaire"
+PageIn
+// MessageID "1434848"
+
+DynamicOverlay
+       Field "Email" 27 167 299 188 $Email;
+ Field "Matricule" 40 99 83 112;
+ Field "No_Matricule" 119 99 195 113 $No_Matricule;
+ Field "Periode" 104 203 232 216 $Periode;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.276,841.89" rule="PatternMatricule" order="1" type="FIRST">
+    <pattern name="PatternMatricule" position="38.0,96.0" size="60.0,17.0" options="276" match=".*matricule"/>
+    <pattern name="Pattern_contenu" position="25.0,241.0" size="128.0,15.0" options="276" match="Description mois en cours"/>
+    <field name="Email" position="26.0,166.0" size="272.0,30.0" variable="Email" options="21"/>
+    <field name="Matricule" position="39.0,98.0" size="43.0,13.0" options="20"/>
+    <field name="No_Matricule" position="118.0,98.0" size="80.0,14.0" variable="No_Matricule" options="20"/>
+    <field name="Periode" position="103.0,202.0" size="128.0,13.0" variable="Periode" options="20"/>
+    </page>
+	 <page size="595.276,841.89" rule="nonVide" order="1" type="NEXT">
+	<pattern name="nonVide" position="38.0,96.0" size="100.0,30.0" options="276" match=".*\s*\S+.*"/>
+
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

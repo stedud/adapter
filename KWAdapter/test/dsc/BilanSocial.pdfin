@@ -1,0 +1,36 @@
+Event "PDF"
+PageIn
+// MessageID "2286336"
+
+DynamicOverlay
+       Field "Adresse" 336 110 561 202 $Adresse;
+ Field "Email" 92 96 322 112 $Email;
+ Field "Indicateur_Email" 29 96 43 113 $Indicateur_Email;
+ Field "Matricule_Nom" 29 111 158 127 $Matricule_Nom;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.28,841.9" rule="BilanSocial AND (Matricule OR Matricule2)" order="1" type="FIRST">
+    <pattern name="BilanSocial" position="29.0,42.0" size="269.0,39.0" options="276" match=".*Bilan social individualis.*"/>
+    <pattern name="Matricule" position="31.0,112.0" size="53.0,12.0" options="276" match=".*Matricule.*"/>
+	<pattern name="Matricule2" position="31.0,122.0" size="49.0,11.0" options="276" match=".*Matricule.*"/>
+    <field name="Adresse" position="335.0,109.0" size="225.0,92.0" variable="Adresse" options="20"/>
+    <field name="Email" description="Email du salarié" position="91.0,95.0" size="230.0,16.0" variable="Email" options="21"/>
+    <field name="Indicateur_Email" position="28.0,95.0" size="14.0,17.0" variable="Indicateur_Email" options="21"/>
+    <field name="Matricule_Nom" position="28.0,110.0" size="129.0,16.0" variable="Matricule_Nom" options="20"/>
+    </page>
+	
+	<page size="595.28,841.9" rule="BilanSocial AND (NOT Matricule AND (NOT Matricule2))" order="1" type="NEXT">
+    <pattern name="BilanSocial" position="29.0,42.0" size="269.0,39.0" options="276" match=".*Bilan social individualis.*"/>
+    <pattern name="Matricule" position="31.0,112.0" size="53.0,12.0" options="276" match=".*Matricule.*"/>
+	<pattern name="Matricule2" position="31.0,122.0" size="49.0,11.0" options="276" match=".*Matricule.*"/>
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

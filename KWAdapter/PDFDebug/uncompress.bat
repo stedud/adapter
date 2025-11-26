@@ -1,0 +1,1 @@
+java -jar C:\DATA\eclipseProjects\KWAdapterREST\lib\pdfbox-app-2.0.21.jar WriteDecodedDoc  "%1" "%1_uncompressed.pdf"

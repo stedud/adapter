@@ -1,0 +1,36 @@
+Event "Papier_in"
+PageIn
+// MessageID "2483808"
+
+DynamicOverlay
+ Field "type" 493 28 547 47 $type;
+ Field "bvr" 183 778 578 801 $bvr;
+ Field "Efface" 22 8 34 23;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.3,841.9" rule="Type" order="1" xoffset="15" type="FIRST">
+    <pattern name="Type" position="492.0,27.0" size="54.0,19.0" options="276" match="1 /    "/>
+    <field name="TypePattern" position="492.0,27.0" size="70.0,19.0" options="21"/>
+    <field name="PapierID" position="17.0,2.0" size="21.0,24.0" options="21"/>
+    <field name="client" position="368.0,235.0" size="30,14.0" variable="client" options="20"/>
+    <field name="QR" position="180.0,590.0" size="160.0,150.0" variable="QR" options="21"><![CDATA[	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\n","");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\r","");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\\c013\\","/r");	QR = org.apache.commons.lang3.StringUtils.replace(QR,"\\c010\\","/n");	return QR;]]></field>
+  
+    </page>
+	
+	<page size="595.3,841.9" rule="NOT Type" order="1" xoffset="15" type="NEXT">
+	<pattern name="Type" position="492.0,27.0" size="54.0,19.0" options="276" match="1 /    "/>
+	<field name="PapierID" position="17.0,2.0" size="21.0,24.0"  options="21"/>
+    <field name="TypePattern" position="492.0,27.0" size="70.0,19.0" options="21"/>
+    
+    </page>
+
+    </s-lxfin>
+       End
+    End
+
+End
+

@@ -1,0 +1,20 @@
+Event "Preformat_IN"
+PageIn
+// MessageID "1828656"
+
+DynamicOverlay
+       LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.3,841.9" order="1" xoffset="15">
+    <pattern name="Pattern" position="85.0,260.0" size="59.0,24.0" options="276" match="Contact"/>
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

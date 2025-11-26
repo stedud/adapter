@@ -1,0 +1,23 @@
+Event "PreforPDF2"
+PageIn
+// MessageID "2745904"
+
+DynamicOverlay
+    Field "matriculePDF" 79 777 128 793 $matriculePDF;
+    LxfSelection
+       Begin
+    <?xml version="1.0"?>
+    <!DOCTYPE s-lxfin SYSTEM "s-lxfin.dtd">
+    
+    <s-lxfin>
+    <page size="595.3,841.9" rule="pattern" order="1" xoffset="0" type="FIRST" boxesFirst="true">
+		<pattern name="pattern" position="80.0,29.0" size="19.0,13.0" options="276" match=".*X.*"/>
+		<field name="matriculePDF" position="78.0,776.0" size="49.0,16.0" variable="matriculePDF" options="20"/>
+		<field name="LigneAddresse2" position="78.0,776.0" size="49.0,16.0" options="20"/>
+    </page>
+    </s-lxfin>
+       End
+    End
+
+End
+

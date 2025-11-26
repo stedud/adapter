@@ -1,0 +1,204 @@
+[2025-08-04T09:37:11.75]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:37:11.754]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:37:11.987]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:37:11.994]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:37:12.004]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:37:12.004]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:37:12.125]-[SEVERE ]- [ 1]- Could not read dsc\generix.dsc
+[2025-08-04T09:37:12.125]-[SEVERE ]- [ 1]- Could not read dsc\generix.dsc
+[2025-08-04T09:37:12.126]-[SEVERE ]- [ 1]- Could not read dsc\generix.dsc
+fr.kw.adapter.parser.process.ParseProcess.<init>(ParseProcess.java:122)
+fr.kw.adapter.engine.ProcessFile.call(ProcessFile.java:258)
+fr.kw.adapter.engine.ProcessFile.call(ProcessFile.java:1)
+picocli.CommandLine.executeUserObject(CommandLine.java:2041)
+picocli.CommandLine.access$1500(CommandLine.java:148)
+picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2461)
+picocli.CommandLine$RunLast.handle(CommandLine.java:2453)
+picocli.CommandLine$RunLast.handle(CommandLine.java:2415)
+picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2273)
+picocli.CommandLine$RunLast.execute(CommandLine.java:2417)
+picocli.CommandLine.execute(CommandLine.java:2170)
+fr.kw.adapter.engine.ProcessFile.main(ProcessFile.java:125)
+[2025-08-04T09:37:56.591]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:37:56.597]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:37:56.811]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:37:56.816]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:37:56.818]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:37:56.818]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:37:56.962]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:37:57.178]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:37:57.196]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:37:57.206]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:37:57.206]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:37:57.269]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:37:57.286]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:37:57.286]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:37:57.587]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:37:57.587]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:37:57.587]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:37:57.598]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:37:57.636]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:37:57.64]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:37:57.737]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:37:58.043]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:37:58.044]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:37:58.067]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:37:58.074]-[INFO   ]- [ 1]- Saving bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:37:58.104]-[INFO   ]- [ 1]- All documents information saved.
+[2025-08-04T09:37:58.105]-[INFO   ]- [ 1]- PARSE_ONLY=true
+[2025-08-04T09:37:58.105]-[INFO   ]- [ 1]- KEEP_PARSED=true
+[2025-08-04T09:37:58.11]-[INFO   ]- [ 1]- Processed 3 documents in PT2.028S
+[2025-08-04T09:39:39.694]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:39:39.699]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:39:39.903]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:39:39.908]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:39:39.909]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:39:39.91]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:39:40.032]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:39:40.183]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:39:40.198]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:39:40.206]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:39:40.207]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:39:40.217]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:39:40.224]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:39:40.224]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:39:40.496]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:39:40.496]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:39:40.496]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:39:40.502]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:39:40.537]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:39:40.539]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:39:40.607]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:39:40.876]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:39:40.877]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:39:40.903]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:39:40.911]-[INFO   ]- [ 1]- Saving bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:39:40.942]-[INFO   ]- [ 1]- All documents information saved.
+[2025-08-04T09:39:40.943]-[INFO   ]- [ 1]- PARSE_ONLY=true
+[2025-08-04T09:39:40.944]-[INFO   ]- [ 1]- KEEP_PARSED=true
+[2025-08-04T09:39:40.949]-[INFO   ]- [ 1]- Processed 3 documents in PT1.772S
+[2025-08-04T09:41:49.801]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:41:49.806]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:41:49.991]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:41:49.996]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:41:49.997]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:41:49.997]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:41:50.116]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:41:50.264]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:41:50.28]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:41:50.287]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:41:50.287]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:41:50.297]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:41:50.306]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:41:50.306]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:41:50.575]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:41:50.576]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:41:50.576]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:41:50.581]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:41:50.62]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:41:50.621]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:41:50.679]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:41:50.943]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:41:50.944]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:41:50.969]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:41:50.979]-[INFO   ]- [ 1]- Saving bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:41:51.018]-[INFO   ]- [ 1]- All documents information saved.
+[2025-08-04T09:41:51.02]-[INFO   ]- [ 1]- PARSE_ONLY=true
+[2025-08-04T09:41:51.02]-[INFO   ]- [ 1]- KEEP_PARSED=true
+[2025-08-04T09:41:51.026]-[INFO   ]- [ 1]- Processed 3 documents in PT1.713S
+[2025-08-04T09:42:28.73]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:42:28.735]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:42:29.026]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:42:29.036]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:42:29.037]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:42:29.037]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:42:29.175]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:42:29.373]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:42:29.391]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:42:29.409]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:42:29.409]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:42:29.422]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:42:29.432]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:42:29.432]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:44:38.781]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:44:38.785]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:44:38.978]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:44:38.984]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:44:38.985]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:44:38.986]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:44:39.119]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:44:39.273]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:44:39.289]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:44:39.299]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:44:39.299]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:44:39.309]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:44:39.316]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:44:39.316]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:44:39.594]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:44:39.594]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:44:39.594]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:44:39.6]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:44:39.636]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:44:39.637]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:44:39.709]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:44:39.993]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:44:39.994]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:44:40.018]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:44:40.027]-[INFO   ]- [ 1]- Saving bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:44:40.069]-[INFO   ]- [ 1]- All documents information saved.
+[2025-08-04T09:44:40.07]-[INFO   ]- [ 1]- PARSE_ONLY=true
+[2025-08-04T09:44:40.07]-[INFO   ]- [ 1]- KEEP_PARSED=true
+[2025-08-04T09:44:40.076]-[INFO   ]- [ 1]- Processed 3 documents in PT1.809S
+[2025-08-04T09:45:06.478]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:45:06.484]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:45:06.778]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:45:06.788]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:45:06.789]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:45:06.789]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:45:06.929]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:45:07.134]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:45:07.15]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:45:07.169]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:45:07.169]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:45:07.181]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:45:07.19]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:45:07.19]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:46:05.42]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:46:05.421]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:46:05.421]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:50:36.158]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:55:31.545]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:55:42.605]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:55:46.627]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:55:54.372]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:55:55.124]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:55:59.86]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:57:05.776]-[INFO   ]- [ 1]- logger started
+[2025-08-04T09:57:05.781]-[INFO   ]- [ 1]- Adapter version : 1.3.3
+[2025-08-04T09:57:06.002]-[INFO   ]- [ 1]- Purge tmp Lifetime=PT24H
+[2025-08-04T09:57:06.007]-[INFO   ]- [ 1]- Purge tmp Schedule=12h
+[2025-08-04T09:57:06.008]-[INFO   ]- [ 1]- Purge bak Lifetime=PT1440H
+[2025-08-04T09:57:06.008]-[INFO   ]- [ 1]- Purge bak Schedule=12h
+[2025-08-04T09:57:06.128]-[INFO   ]- [ 1]- Loading descriptiondsc\generix.dsc
+[2025-08-04T09:57:06.267]-[INFO   ]- [ 1]- Parsing c:\Temp\bphom_spool.txt
+[2025-08-04T09:57:06.283]-[INFO   ]- [ 1]- Using parser type FieldParser
+[2025-08-04T09:57:06.292]-[INFO   ]- [ 1]- Event DEVICE, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\DEVICE.event
+[2025-08-04T09:57:06.292]-[INFO   ]- [ 1]- New event DEVICE
+[2025-08-04T09:57:06.304]-[INFO   ]- [ 1]- New doc DEVICE, 1
+[2025-08-04T09:57:06.311]-[INFO   ]- [ 1]- Event INTEST_STAMPA, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\INTEST_STAMPA.event
+[2025-08-04T09:57:06.311]-[INFO   ]- [ 1]- New event INTEST_STAMPA
+[2025-08-04T09:57:06.606]-[INFO   ]- [ 1]- New doc INTEST_STAMPA, 2
+[2025-08-04T09:57:06.606]-[INFO   ]- [ 1]- Event BPHOM_STD, structure file:C:\Users\StéphaneDurand(teams\OneDrive - KW Soft Solutions\Documents\WS\eclipseKWProjects\KWAdapter\test\dictionaries\BPHOM_STD.event
+[2025-08-04T09:57:06.606]-[INFO   ]- [ 1]- New event BPHOM_STD
+[2025-08-04T09:57:06.613]-[INFO   ]- [ 1]- New doc BPHOM_STD, 3
+[2025-08-04T09:57:06.65]-[INFO   ]- [ 1]- Saving documents information...
+[2025-08-04T09:57:06.651]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:57:06.724]-[INFO   ]- [ 1]- Saving bphom_spool.txt_DEVICE_1 to .\bak\generix\DEVICE\bphom_spool_txt_DEVICE_1
+[2025-08-04T09:57:06.986]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:57:06.987]-[INFO   ]- [ 1]- Saving bphom_spool.txt_INTEST_STAMPA_2 to .\bak\generix\INTEST_STAMPA\bphom_spool_txt_INTEST_STAMPA_2
+[2025-08-04T09:57:07.011]-[INFO   ]- [ 1]- Saving document bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:57:07.019]-[INFO   ]- [ 1]- Saving bphom_spool.txt_BPHOM_STD_3 to .\bak\generix\BPHOM_STD\bphom_spool_txt_BPHOM_STD_3
+[2025-08-04T09:57:07.054]-[INFO   ]- [ 1]- All documents information saved.
+[2025-08-04T09:57:07.055]-[INFO   ]- [ 1]- PARSE_ONLY=true
+[2025-08-04T09:57:07.055]-[INFO   ]- [ 1]- KEEP_PARSED=true
+[2025-08-04T09:57:07.06]-[INFO   ]- [ 1]- Processed 3 documents in PT1.786S

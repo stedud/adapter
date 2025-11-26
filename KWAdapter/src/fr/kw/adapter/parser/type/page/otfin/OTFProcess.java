@@ -1,0 +1,580 @@
+package fr.kw.adapter.parser.type.page.otfin;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.script.ScriptEngine;
+
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.pdfbox.pdmodel.PDPage;
+
+import de.kwsoft.mtext.converter.gof.DrawBoxesFirstFilter;
+import de.kwsoft.mtext.converter.gof.OtfConverter;
+import de.kwsoft.mtext.converter.gof.OtfConverterException;
+import de.kwsoft.mtext.mffmfd.DocumentGeneratorException;
+import de.kwsoft.mtext.mffmfd.PageInfo;
+import de.kwsoft.mtext.mffmfd.PageSimplexDuplex;
+import de.kwsoft.mtext.mffmfd.embed.MfdForEmbeddedDocument;
+import fr.kw.adapter.document.DataSourceException;
+import fr.kw.adapter.document.Datasource;
+import fr.kw.adapter.document.DatasourceType;
+import fr.kw.adapter.document.Document;
+import fr.kw.adapter.parser.process.ParseProcessConfiguration;
+import fr.kw.adapter.parser.script.ScriptEngineHelper;
+import fr.kw.adapter.parser.script.ScriptEngineHelperStatic;
+import fr.kw.adapter.parser.type.ParserType;
+import fr.kw.adapter.parser.type.page.AFileProcess;
+import fr.kw.adapter.parser.type.page.FileProcessException;
+import fr.kw.adapter.parser.type.page.document.ADocument;
+import fr.kw.adapter.parser.type.page.document.Field;
+import fr.kw.adapter.parser.type.page.document.Page;
+import fr.kw.adapter.parser.type.page.pdfin.PDFProcess;
+import fr.kw.adapter.parser.type.page.settings.DocumentParserDefinition;
+import fr.kw.adapter.parser.type.page.settings.PageDocumentDefinition;
+import fr.kw.adapter.parser.type.page.settings.PageSettingsException;
+import fr.kw.adapter.parser.type.page.settings.Unit;
+import fr.kw.adapter.parser.type.page.settings.field.FieldDefinition;
+import fr.kw.adapter.parser.type.page.settings.field.PageType;
+import fr.kw.adapter.parser.type.page.settings.pattern.RulePattern;
+import fr.sap.otf.parser.OTFParser;
+import fr.sap.otf.parser.geometry.Box;
+import fr.sap.otf.parser.object.Argument;
+import fr.sap.otf.parser.object.Command;
+import fr.sap.otf.parser.object.HeaderEntry;
+import fr.utils.LogHelper;
+import fr.utils.Pair;
+import fr.utils.Utils;
+
+public class OTFProcess {
+
+	public static final double UN_MM_EN_POINTS = 2.83465;
+	public static final double UN_POINT_EN_MM = 1 / UN_MM_EN_POINTS;
+	protected Map<String, DocumentParserDefinition> documentDefinitions = new HashMap<String, DocumentParserDefinition>();
+	protected ParseProcessConfiguration configuration;
+
+	public OTFProcess(ParseProcessConfiguration configuration) {
+		this.configuration = configuration;
+
+	}
+
+	public void addDocumentDefinition(DocumentParserDefinition docDef) {
+		this.documentDefinitions.put(docDef.getName(), docDef);
+	}
+
+	public void addDocumentDefinitions(List<DocumentParserDefinition> docDefs) {
+		for (DocumentParserDefinition docDef : docDefs) {
+			this.addDocumentDefinition(docDef);
+		}
+	}
+
+	public List<Document> parse(File gof) throws IOException, FileProcessException, PageSettingsException,
+			DocumentGeneratorException, DataSourceException {
+
+		ScriptEngine scriptEngine = ScriptEngineHelperStatic.getScriptEngine("javascript", true);
+		List<Document> result = new ArrayList<Document>();
+
+		LogHelper.info("Processing " + gof);
+		File tmpFolder = Utils.getTmpFolder();
+		tmpFolder.mkdirs();
+
+		OTFParser parser = new OTFParser(gof);
+		String datePattern = "yyyy-MM-dd";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(datePattern);
+		String timePattern = "HH-mm-ss";
+		SimpleDateFormat simpleTimeFormat = new SimpleDateFormat(timePattern);
+		final String date = simpleDateFormat.format(new Date());
+		final String time = simpleTimeFormat.format(new Date());
+
+		SAPGOFDocument currentDoc = null;
+
+		int docNum = 0;
+
+		int pageNum = 0;
+		boolean pageUsed = false;
+		Page page = null;
+		boolean isLastPage = false;
+		PageDocumentDefinition currentPageDef = null;
+		DocumentParserDefinition currentDocDef = null;
+		// List<Rectangle2D> toRemove = new ArrayList<Rectangle2D>();
+		do {
+			pageUsed = false;
+			fr.sap.otf.parser.object.Page gofPage = parser.getNextPage();
+			if (gofPage == null || parser.isEndOfStreamReached()) {
+				// System.out.println("LAST PAGE 1");
+				isLastPage = true;
+			}
+
+			if (gofPage != null) {
+				pageNum++;
+				LogHelper.debug("Analysing page " + pageNum);
+			} else {
+				LogHelper.info("End of pages");
+			}
+
+			if (gofPage != null)
+				page = new Page(gofPage);
+			else
+				page = null;
+
+			boolean newDocTriggered = false;
+			boolean pageInDocTriggered = false;
+			Map<String, Field> pageFieldsContext = new HashMap<String, Field>();
+			
+			for (DocumentParserDefinition docDef : documentDefinitions.values()) {
+				for (PageDocumentDefinition pageDef : docDef.getPageDefinitions()) {
+
+					if (page != null) {
+						page.setPageDocumentDefinition(pageDef);
+						Map<String, Object> matchContext = new HashMap<String, Object>();
+						if (currentDoc != null)
+						{
+							matchContext.putAll(currentDoc.getContext());
+						}
+						
+						try {
+							
+							pageFieldsContext = this.getPageFields(page, matchContext, pageNum, pageDef, false);
+							Map<String,Object> pageContext = new HashMap<String, Object>();
+							
+							for (Field f : pageFieldsContext.values())
+							{
+								pageContext.put(f.getName(), f.getName());
+							}
+							matchContext.put("page", pageContext);
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+						
+						RulePattern docPatternRule = pageDef.getMatchRule();
+
+						boolean newDoc = docPatternRule == null ? true
+								: docPatternRule.match(page,scriptEngine) && (pageDef.getPageType() == PageType.FIRST
+										|| pageDef.getPageType() == PageType.ANY);
+						boolean inDoc = currentDoc == null ? false
+								: (docPatternRule == null || docPatternRule.match(page,scriptEngine))
+										&& (pageDef.getPageType() == PageType.NEXT
+												|| pageDef.getPageType() == PageType.LAST
+												|| pageDef.getPageType() == PageType.ANY);
+						inDoc = inDoc && (currentDoc != null
+								&& currentDoc.getDefinition().getName().compareTo(docDef.getName()) == 0);
+
+						if (newDoc) {
+							currentPageDef = pageDef;
+							currentDocDef = docDef;
+							// toRemove.clear();
+							// for (FieldDefinition fieldDef : docDef.getFields()) {
+							// if (fieldDef.isRemoveText())
+							// toRemove.add(fieldDef.getRectPt());
+							// }
+							newDocTriggered = true;
+							LogHelper.info("New doc '" + docDef.getName() + "' triggered at page " + pageNum);
+							break;
+						} else if (inDoc && currentDoc != null
+								&& currentDoc.getDefinition().getName().compareTo(docDef.getName()) == 0) {
+							pageInDocTriggered = true;
+							LogHelper.info("Page " + pageNum + " triggered in doc '" + docDef.getName());
+							break;
+						}
+
+						page.setPageDocumentDefinition(currentPageDef);
+					}
+				}
+			}
+
+			if (newDocTriggered) {
+
+				if (currentDoc != null) {
+					Pair pair = closeDoc(parser, currentDoc, FilenameUtils.getBaseName(gof.getName()), tmpFolder);
+
+					File mfdFile = (File) pair.getFirstValue();
+					fr.kw.adapter.document.Document document = new fr.kw.adapter.document.Document();
+					Datasource datasource = new Datasource(DatasourceType.MFD, mfdFile);
+					if (!datasource.isSameDataFile(mfdFile))
+						mfdFile.delete();
+					datasource.setName(currentDoc.getDefinition().getName());
+
+					document.setEnvironment(configuration.get("ENVIRONMENT", ""));
+
+					document.setPageInfos((List<PageInfo>) pair.getSecondValue());
+					document.setMainDatasource(datasource);
+					document.setName(currentDoc.getDefinition().getName());
+					document.setOrigin(gof.getPath());
+					document.setOriginType(ParserType.PAGE_SAPGOF);
+					document.setId(gof.getPath() + "_" + (docNum+1));
+					document.setNum(docNum+1);
+
+					for (Field field : currentDoc.getFields().values()) {
+						document.getMetadata().put(field.getName(), field.getValue());
+					}
+					if (currentDoc.getFile().exists())
+					{
+						if (!currentDoc.getFile().delete()) {
+							LogHelper.warn(this.getClass().getSimpleName() + ", Could not delete " + currentDoc.getFile());
+						}
+					}
+					result.add(document);
+
+				}
+
+				docNum++;
+
+				currentDoc = new SAPGOFDocument(currentDocDef);
+				page.setPageDocumentDefinition(currentPageDef);
+				currentDoc.setPosition(docNum);
+				currentDoc.init(parser);
+				// documents.add(currentDoc);
+				for (Field f : pageFieldsContext.values())
+				{
+					Field previousField = currentDoc.getFields().get(f.getName());
+					if (previousField != null && ! StringUtils.isBlank(previousField.getValue())) continue;
+					else
+					currentDoc.getFields().put(f.getName(), f);
+				}
+				currentDoc.getFields().put("_date", new Field("_date", date));
+				currentDoc.getFields().put("_time", new Field("_time", time));
+				currentDoc.getFields().put("_docType", new Field("_docType", currentDocDef.getName()));
+				currentDoc.getFields().put("_inputFile", new Field("_inputFile", gof.getPath()));
+				currentDoc.getFields().put("_inputFileName", new Field("_inputFileName", gof.getName()));
+				currentDoc.getFields().put("_inputFileBaseName",
+						new Field("_inputFileBaseName", FilenameUtils.getBaseName(gof.getName())));
+				currentDoc.getFields().put("_docNum", new Field("_docNum", String.valueOf(docNum)));
+				currentDoc.getFields().put("jobId", new Field("jobId", gof.getName()));
+				currentDoc.addPage(page);
+
+				pageUsed = true;
+
+			}
+			if (isLastPage) {
+				// System.out.println("LastPage");
+				if (currentDoc != null) {
+					if (page != null) {
+						if (!pageUsed && pageInDocTriggered) {
+							page.setPageDocumentDefinition(currentPageDef);
+							currentDoc.addPage(page);
+							for (Field f : pageFieldsContext.values())
+							{
+								Field previousField = currentDoc.getFields().get(f.getName());
+								if (previousField != null && ! StringUtils.isBlank(previousField.getValue())) continue;
+								else
+								currentDoc.getFields().put(f.getName(), f);
+							}
+							pageUsed = true;
+						}
+					}
+					Pair pair = closeDoc(parser, currentDoc, FilenameUtils.getBaseName(gof.getName()), tmpFolder);
+					File mfdFile = (File) pair.getFirstValue();
+					fr.kw.adapter.document.Document document = new fr.kw.adapter.document.Document();
+					Datasource datasource = new Datasource(DatasourceType.MFD, mfdFile);
+					if (!datasource.isSameDataFile(mfdFile))
+						mfdFile.delete();
+					datasource.setName(currentDoc.getDefinition().getName());
+					document.setMainDatasource(datasource);
+					document.setPageInfos((List<PageInfo>) pair.getSecondValue());
+					document.setName(currentDoc.getDefinition().getName());
+					document.setOrigin(gof.getPath());
+					document.setOriginType(ParserType.PAGE_PDF);
+					document.setId(gof.getPath() + "_" + (docNum+1));
+					document.setEnvironment(configuration.get("ENVIRONMENT", ""));
+					document.setNum(docNum+1);
+					for (Field field : currentDoc.getFields().values()) {
+						document.getMetadata().put(field.getName(), field.getValue());
+					}
+					if (currentDoc.getFile().exists())
+					{
+						if (!currentDoc.getFile().delete()) {
+							LogHelper.warn(this.getClass().getSimpleName() + ", Could not delete " + currentDoc.getFile());
+						}
+					}
+					result.add(document);
+
+				}
+
+			} else if (!pageUsed && pageInDocTriggered) {
+				if (currentDoc != null) {
+					page.setPageDocumentDefinition(currentPageDef);
+
+					currentDoc.addPage(page);
+					for (Field f : pageFieldsContext.values())
+					{
+						Field previousField = currentDoc.getFields().get(f.getName());
+						if (previousField != null && ! StringUtils.isBlank(previousField.getValue())) continue;
+						else
+						currentDoc.getFields().put(f.getName(), f);
+					}
+					pageUsed = true;
+				}
+
+			}
+
+			if (!pageUsed && !isLastPage)
+				LogHelper.warn("Page " + pageNum + " skipped");
+
+		} while (!isLastPage);
+
+		return result;
+
+	}
+	
+	protected Map<String, Field> getPageFields(Page page,Map<String, Object> context, int pageNum, PageDocumentDefinition pageDef, Boolean forceRemoveTextOption) throws Exception
+	{
+		Map<String, Field> fields = new HashMap<String, Field>();
+		Map<String, Object> localContext = new HashMap<String, Object>(context); 
+		
+		for (FieldDefinition fieldDef : pageDef.getFields()) {
+
+				Field f = null;
+				String value;
+				
+					value = extractText(page, fieldDef.getPosition().getX(), fieldDef.getPosition().getY(),
+							fieldDef.getDimension().getX(), fieldDef.getDimension().getY(), Unit.MM,
+							forceRemoveTextOption == null ? fieldDef.isRemoveText() : forceRemoveTextOption);
+					if (value == null)
+						value = "";
+					localContext.put(fieldDef.getName(), value);
+					f = new Field(fieldDef.getName(), fieldDef.isKeepSpace() ? value : value.trim());
+					ADocument.runFieldScriptStatic(f, fieldDef.getScript(), localContext);
+					fields.put(f.getName(),f);
+					localContext.put(f.getName(), f.getValue());				
+
+		}
+		return fields;
+		
+	}
+
+	protected Pair closeDoc(OTFParser parser, SAPGOFDocument doc, String baseName, File tmpFolder)
+			throws IOException, FileProcessException {
+		// System.out.println("Closing doc " +
+		// doc.getFields().get("_docNum").getValue());
+
+		int nbPages = doc.getPages().size();
+		doc.getFields().put("_docPages", new Field("_docPages", String.valueOf(nbPages)));
+		int pageNum = 0;
+		for (Page page : doc.getPages()) {
+
+			pageNum++;
+
+			for (FieldDefinition fieldDef : doc.getDefinition().getFields()) {
+				if (fieldDef.getPage().getPageType() == PageType.ANY
+						|| (fieldDef.getPage().getPageType() == PageType.NEXT && pageNum > 1)
+						|| (fieldDef.getPage().getPageType() == PageType.LAST && pageNum == nbPages)
+						|| (fieldDef.getPage().getPageType() == PageType.EXACT
+								&& pageNum == fieldDef.getPage().getExactPage())
+						|| (fieldDef.getPage().getPageType() == PageType.FIRST && pageNum == 1)) {
+					Field f = null;
+					String value;
+					try {
+						value = extractText(page, fieldDef.getPosition().getX(), fieldDef.getPosition().getY(),
+								fieldDef.getDimension().getX(), fieldDef.getDimension().getY(), Unit.MM,
+								fieldDef.isRemoveText());
+						if (value == null)
+							value = "";
+						f = new Field(fieldDef.getName(), fieldDef.isKeepSpace() ? value : value.trim());
+						doc.runFieldScript(f, fieldDef.getScript());
+						doc.getFields().put(f.getName(), f);
+					} catch (Exception e) {
+						if (f != null)
+							doc.setError(new Exception(
+									"Exception while evaluating field " + f.getName() + " : " + e.getMessage(), e));
+						else
+							doc.setError(e);
+					}
+
+				}
+			}
+
+			if (page.getPageDocumentDefinition().getxOffset() != 0
+					|| page.getPageDocumentDefinition().getyOffset() != 0) {
+				int xTwip = (int) fr.sap.otf.parser.object.Page
+						.pointToTwip(page.getPageDocumentDefinition().getxOffset());
+				int yTwip = (int) fr.sap.otf.parser.object.Page
+						.pointToTwip(page.getPageDocumentDefinition().getyOffset());
+
+				translatePage(xTwip, yTwip, (fr.sap.otf.parser.object.Page) page.getNativePage());
+			}
+
+		}
+
+		File gofDoc = new File(tmpFolder,  baseName + "_" + doc.getPosition() + ".gof");
+
+		doc.createFile(gofDoc);
+
+		// ****************************
+		File mfdFile = new File(doc.getFile().getPath() + ".mfd");
+		try {
+
+			boolean sortBoxes = false;
+			for (Page page : doc.getPages()) {
+				if (page.getPageDocumentDefinition().isBoxesFirst()) {
+					sortBoxes = true;
+					break;
+				}
+			}
+			OtfConverter converter = new OtfConverter();
+			if (sortBoxes)
+				converter.addCommandFilter(new DrawBoxesFirstFilter());
+			// converter.convertFile(gof.toPath(), mfd.toPath(), null, "mfd", null);
+
+			converter.convertFile(doc.getFile().toPath(), mfdFile.toPath(), null, "mfd", null);
+		} catch (OtfConverterException e) {
+			throw new FileProcessException(
+					"Could not convert OTF to MFD for document '" + doc.getFile() + "' : " + e.getMessage(), e);
+		}
+
+		// List<PageInfo> pageInfos =
+		// MfdForEmbeddedDocument.createMfdForEmbeddedDocument(thisDoc.getFile(), "mfd",
+		// mfd);//Création du fichier MFD à partir du PDF
+
+		List<PageInfo> pageInfos = new ArrayList<PageInfo>();
+		int pageInfoNum = 0;
+		for (Page pageInfo : doc.getPages()) {
+			pageInfoNum++;
+			fr.sap.otf.parser.object.Page gofPageInfo = (fr.sap.otf.parser.object.Page) pageInfo.getNativePage();
+			// search for page information
+
+			int width = 595000;// 210mm en millieme de point
+			int height = 842000;// 297mm en millieme de point
+			String orientation = "P";
+			PageSimplexDuplex simplexDuplex = PageSimplexDuplex.UNDEFINED;
+			// (pageNum % 2) == 1 ? PageSimplexDuplex.LE_DUPLEX_FRONT :
+			// PageSimplexDuplex.LE_DUPLEX_BACK;
+			String inputTray = "";
+			String outputTray = "";
+
+			for (Command command : gofPageInfo.getContents()) {
+				if (StringUtils.startsWith(command.getID(), "OP")) {
+					width = Integer.parseInt(command.getParameters().get(5).getValue());// twip
+					height = Integer.parseInt(command.getParameters().get(4).getValue());// twip
+
+					orientation = command.getParameters().get(2).getValue();
+					String simplexDuplexSAP = command.getParameters().get(8).getValue();
+					if (StringUtils.compare(simplexDuplexSAP, "S") == 0) {
+						simplexDuplex = PageSimplexDuplex.SIMPLEX;
+					} else {// duplex
+						if (StringUtils.compare(orientation, "L") != 0) {// portrait
+							simplexDuplex = (pageNum % 2) == 1 ? PageSimplexDuplex.LE_DUPLEX_FRONT
+									: PageSimplexDuplex.LE_DUPLEX_BACK;
+						} else {// paysage
+							simplexDuplex = (pageNum % 2) == 1 ? PageSimplexDuplex.SE_DUPLEX_FRONT
+									: PageSimplexDuplex.SE_DUPLEX_BACK;
+						}
+					}
+					inputTray = command.getParameters().get(9).getValue();
+					doc.getFields().put("inputTray", new Field("inputTray", inputTray));
+					doc.getFields().put("inputTray" + pageInfoNum, new Field("inputTray" + pageInfoNum, inputTray));
+					doc.getFields().put("simplexDuplex" + pageInfoNum, new Field("simplexDuplex" + pageInfoNum, simplexDuplex.name()));
+
+					break;
+				}
+			}
+
+			width = Math.round(fr.sap.otf.parser.object.Page.twipToPoint(width) * 1000);
+			height = Math.round(fr.sap.otf.parser.object.Page.twipToPoint(height) * 1000);
+
+			PageInfo thisPageInfo = new PageInfo(width, height, PageSimplexDuplex.UNDEFINED, "", "");
+			pageInfos.add(thisPageInfo);
+		}
+
+		for (HeaderEntry header : parser.getHeader().getHeaders()) {
+			doc.getFields().put(header.getName(), new Field(header.getName(), header.getValue()));
+		}
+
+		doc.close();
+		
+		Pair pair = new Pair();
+		pair.setFirstValue(mfdFile);
+		pair.setSecondValue(pageInfos);
+		return pair;
+//****************************
+
+	}
+
+	public static String extractText(Page page, float x, float y, float w, float h, Unit unit, boolean remove)
+			throws FileProcessException, IOException {
+
+		if (page == null)
+			return "";
+		if (w == 0.0 && h == 0.0 && x == 0.0 && y == 0.0)
+			return "";
+
+		if (page.getNativePage() instanceof PDPage) {
+
+			return PDFProcess.extractText((PDPage) page.getNativePage(), x, y, w, h, unit);
+		} else if (page.getNativePage() instanceof fr.sap.otf.parser.object.Page) {
+			long xTwip = fr.sap.otf.parser.object.Page.pointToTwip(
+					Math.round(AFileProcess.getPoints(x, unit) - page.getPageDocumentDefinition().getxOffset()));
+			long yTwip = fr.sap.otf.parser.object.Page.pointToTwip(
+					Math.round(AFileProcess.getPoints(y, unit) - page.getPageDocumentDefinition().getyOffset()));
+			long wTwip = fr.sap.otf.parser.object.Page.pointToTwip(Math.round(AFileProcess.getPoints(w, unit)));
+			long hTwip = fr.sap.otf.parser.object.Page.pointToTwip(Math.round(AFileProcess.getPoints(h, unit)));
+
+			Box box = new Box();
+			box.getPosition().setX(xTwip);
+			box.getPosition().setY(yTwip);
+			box.getDimension().setW(wTwip);
+			box.getDimension().setH(hTwip);
+			String text = ((fr.sap.otf.parser.object.Page) page.getNativePage()).getText(box, remove);
+			return text;
+		}
+
+		return "";
+	}
+
+	public void translatePage(int xTwips, int yTwips, fr.sap.otf.parser.object.Page gofPage) {
+		for (Command command : gofPage.getContents()) {
+			switch (command.getID()) {
+			case "MT":
+			case "BX":
+			case "LI": {
+				Argument x = command.getParameters().get(0);
+				Argument y = command.getParameters().get(1);
+				int xValue = Integer.parseInt(x.getValue());
+				int yValue = Integer.parseInt(y.getValue());
+				xValue += xTwips;
+				yValue += yTwips;
+				x.setValue(String.format("%05d", xValue));
+				y.setValue(String.format("%05d", yValue));
+				command.rebuildLine();
+			}
+				break;
+
+			}
+
+		}
+	}
+
+	public static float getPoints(float mm, Unit unit) {
+
+		switch (unit) {
+		case MM:
+			return (float) (mm * UN_MM_EN_POINTS);
+		case POINT:
+			return mm;
+		default:
+			return mm;
+		}
+
+	}
+
+	public static List<PageInfo> pdf2mfd(File pdf, File targetMfd) throws DocumentGeneratorException {
+
+		List<PageInfo> pageInfos = MfdForEmbeddedDocument.createMfdForEmbeddedDocument(pdf, "mfd", targetMfd);// Création
+																												// du
+																												// fichier
+																												// MFD à
+																												// partir
+																												// du
+																												// PDF
+		return pageInfos;
+
+	}
+
+}

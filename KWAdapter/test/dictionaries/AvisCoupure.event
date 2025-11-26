@@ -1,0 +1,41 @@
+StreamIn
+// Generated with StreamIN
+  Root Name "Message" UsePriority
+    Block "Avis"
+      Field "ID" $ID
+      Field "Adr_Coupure" $Adr_Coupure
+      Field "Adr_Client_1" $Adr_Client_1
+      Field "Adr_Client_2" $Adr_Client_2
+      Field "Adr_Client_3" $Adr_Client_3
+      Field "Adr_Client_4" $Adr_Client_4
+      Field "Adr_Client_5" $Adr_Client_5
+      Field "Date_Debut1" $Date_Debut1 Format "Ddd.mm.yyyy"
+      Field "Date_Fin1" $Date_Fin1 Format "Ddd.mm.yyyy"
+      Field "Heure_Debut1" $Heure_Debut1
+      Field "Heure_Fin1" $Heure_Fin1
+      Field "Jour_Debut1" $Jour_Debut1
+      Field "Jour_Fin1" $Jour_Fin1
+      Field "Date_Debut2" $Date_Debut2 Format "Ddd.mm.yyyy"
+      Field "Date_Fin2" $Date_Fin2 Format "Ddd.mm.yyyy"
+      Field "Heure_Debut2" $Heure_Debut2
+      Field "Heure_Fin2" $Heure_Fin2
+      Field "Jour_Debut2" $Jour_Debut2
+      Field "Jour_Fin2" $Jour_Fin2
+      Field "Date_Debut3" $Date_Debut3 Format "Ddd.mm.yyyy"
+      Field "Date_Fin3" $Date_Fin3 Format "Ddd.mm.yyyy"
+      Field "Heure_Debut3" $Heure_Debut3
+      Field "Heure_Fin3" $Heure_Fin3
+      Field "Jour_Debut3" $Jour_Debut3
+      Field "Jour_Fin3" $Jour_Fin3
+      Field "Date_Debut4" $Date_Debut4 Format "Ddd.mm.yyyy"
+      Field "Date_Fin4" $Date_Fin4 Format "Ddd.mm.yyyy"
+      Field "Heure_Debut4" $Heure_Debut4
+      Field "Heure_Fin4" $Heure_Fin4
+      Field "Jour_Debut4" $Jour_Debut4
+      Field "Jour_Fin4" $Jour_Fin4
+      Field "Type_Travaux" $Type_Travaux
+      Field "No_Client" $No_Client
+      Field "Statut" $Statut
+      Field "No_Dossier" $No_Dossier
+    End
+  End

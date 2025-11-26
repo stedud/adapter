@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+   <date>2025-08-04</date>
+   <originBaseName>bphom_spool</originBaseName>
+   <_date>2025-08-04</_date>
+   <inputFileName>bphom_spool.txt</inputFileName>
+   <originFileName>bphom_spool.txt</originFileName>
+   <docId>bphom_spool.txt_DEVICE_1</docId>
+   <docType>DEVICE</docType>
+   <origin>bphom_spool.txt</origin>
+   <DEVICE>
+      <DEVICE>
+         <MEDIA_GENERIX>PMV0GHH031</MEDIA_GENERIX>
+         <SPOOL/>
+         <AGENT/>
+         <OUTPUT_GNX/>
+      </DEVICE>
+   </DEVICE>
+   <docIdx>1</docIdx>
+   <originExtension>txt</originExtension>
+   <_docType>DEVICE</_docType>
+   <jobId>c:\Temp\bphom_spool.txt</jobId>
+   <inputFile>c:\Temp\bphom_spool.txt</inputFile>
+   <_docNum>1</_docNum>
+   <environment/>
+   <fr_kw_adapter_document_Datasource_267bbe1aName>DEVICE</fr_kw_adapter_document_Datasource_267bbe1aName>
+   <name>DEVICE</name>
+   <time>09-57-06</time>
+   <_time>09-57-06</_time>
+   <timestamp>1754294226293</timestamp>
+</context>

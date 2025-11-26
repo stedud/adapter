@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<otf-info>
+  <header>
+    <entry name="MAJOR">2</entry>
+    <entry name="MINOR">1</entry>
+    <entry name="FORMAT">OTF</entry>
+    <entry name="RQID">19941</entry>
+    <entry name="RQOWNER">ULBERS</entry>
+    <entry name="RQCLIENT">705</entry>
+    <entry name="RQCREATIME">21.08.2020 17:47:14</entry>
+    <entry name="RQNAME">SMART</entry>
+    <entry name="RQSUFFIX1">SGFA</entry>
+    <entry name="RQSUFFIX2">ULBERS</entry>
+    <entry name="RQORIGDEST">SGFA</entry>
+    <entry name="DVCODEPAGE">4010</entry>
+    <entry name="DVDEVTYPE">SAPGOF</entry>
+    <entry name="DVORIGDEVTYPE">SAPGOF</entry>
+    <entry name="PJAMOUNT">1</entry>
+    <entry name="PJCLIENT">705</entry>
+    <entry name="PJDEPARTMENT"></entry>
+    <entry name="PJFORM">DINA4</entry>
+    <entry name="PJJOBNO">1</entry>
+    <entry name="PJLAUNCHED">21.08.2020 17:47:14</entry>
+    <entry name="PJENDPAGE">0</entry>
+    <entry name="PJSTRTPAGE">0</entry>
+    <entry name="PJTELENUM"></entry>
+    <entry name="PJPRINTER">SAPGOF_ASCII_Printer</entry>
+    <entry name="PJPRIO">5</entry>
+    <entry name="PJRECEIVER"></entry>
+    <entry name="PJTITLE"></entry>
+    <entry name="PJUSER">ULBERS</entry>
+  </header>
+  <pages>
+    <page width="595300" height="841900"/>
+    <page width="595300" height="841900"/>
+    <page width="595300" height="841900"/>
+  </pages>
+</otf-info>

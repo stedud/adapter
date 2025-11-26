@@ -1,0 +1,240 @@
+START DEVICE
+MEDIA_GENERIX                                     PMV0GHH031
+SPOOL
+AGENT
+OUTPUT_GNX
+START INTEST_STAMPA
+Stampa Intestaz.(BEE)
+START BPHOM_STD
+edteml (B00)                                      1
+emlexp (B00)                                      FGE50MV0GH-SFRIBI04A{generixgroup.com
+emladr01 (B00)                                    fmporzio{generixgroup.com
+emladr02 (B00)
+emladr03 (B00)
+emladr04 (B00)
+emladr05 (B00)
+emladr06 (B00)
+emladr07 (B00)
+emladr08 (B00)
+emladr09 (B00)
+emladr10 (B00)
+emladr11 (B00)
+codact (B01)                                      001
+ad1act (B01)                                      .
+ad2act (B01)
+cpiact (B01)                                      27050
+cpoact (B01)                                      27050
+cptact (B01)
+ediact (B01)
+faxact (B01)
+libact (B01)                                      Grove Cameron
+nomact (B01)                                      GROVE C/O MVN LOGISTICS
+payact (B01)                                      I
+telact (B01)
+tlxact (B01)                                      .
+vilact (B01)                                      CODEVILLA
+ad1000 (B01)                                      .
+ad2000 (B01)
+cpi000 (B01)
+cpo000 (B01)                                      00000
+cpt000 (B01)
+edi000 (B01)
+fax000 (B01)
+lib000 (B01)                                      Toutes Activités
+nom000 (B01)                                      .
+pay000 (B01)
+tel000 (B01)
+tlx000 (B01)
+vil000 (B01)                                      .
+numvagv (B09)                                     21133002
+libvagv (B09)                                     Consegna n° 21000861-000
+datprpv (B09)                                     20210513
+cirpic (B27)                                      999
+libcir (B27)                                      Pallet Completi
+codkaik (B26)                                     010
+libkaik (B26)                                     BAIA 10
+numlivve (B13)                                    21000861
+snulivve (B13)                                    000
+nomclive (B13)                                    STABILIMENTO CAMERON
+ad1clive (B13)                                    NAVETTA INTERNA
+ad2clive (B13)
+ad3clive (B13)
+cpiclive (B13)
+cpoclive (B13)                                    00000
+vilclive (B13)                                    VOGHERA
+payclive (B13)                                    I
+telclive (B13)
+tlxclive (B13)
+faxclive (B13)
+catclive (B13)                                    STD
+codrgtve (B13)
+codsitve (B13)
+codtlive (B13)                                    STD
+datlivve (B13)                                    20210512
+diplivve (B13)
+msgliv1ve (B13)
+msgliv2ve (B13)
+refclive (B13)
+toplivve (B13)
+reflivve (B13)                                    ASD12051
+toulivve (B13)                                    0000
+ordlivve (B13)                                    0000
+msgprp1ve (B13)
+msgprp2ve (B13)
+cliliv (B02)                                      CLI1
+ad1cliliv (B02)                                   NAVETTA INTERNA
+ad2cliliv (B02)
+ad3cliliv (B02)
+cm1cliliv (B02)
+cm2cliliv (B02)
+cm3cliliv (B02)
+codrgtliv (B02)
+cpicliliv (B02)
+cpocliliv (B02)                                   00000
+edicliliv (B02)                                   CLI1
+emladrliv (B02)
+faxcliliv (B02)
+nomcliliv (B02)                                   STABILIMENTO CAMERON
+paycliliv (B02)                                   I
+telcliliv (B02)
+tlxcliliv (B02)
+vilcliliv (B02)                                   VOGHERA
+codcli (B02)                                      CLI1
+ad1clicli (B02)                                   NAVETTA INTERNA
+ad2clicli (B02)
+ad3clicli (B02)
+cm1clicli (B02)
+cm2clicli (B02)
+cm3clicli (B02)
+codrgtcli (B02)
+cpiclicli (B02)
+cpoclicli (B02)                                   00000
+ediclicli (B02)                                   CLI1
+emladrcli (B02)
+faxclicli (B02)
+nomclicli (B02)                                   STABILIMENTO CAMERON
+payclicli (B02)                                   I
+telclicli (B02)
+tlxclicli (B02)
+vilclicli (B02)                                   VOGHERA
+numsupse (B17)                                    21060811
+snusupse (B17)                                    000
+clilivse (B17)                                    CLI1
+codaclse (B17)
+codactse (B17)                                    001
+codcmpse (B17)
+codembse (B17)                                    EPA
+codpalse (B17)                                    111111111100000277
+cumcolse (B17)                                    0000000
+cumligse (B17)                                    0001
+cumlogse (B17)                                    00000017,000
+cumpoise (B17)                                    00000000,001
+cumprtse (B17)                                    000000001
+cumuotse (B17)                                    0000001,00
+cumvolse (B17)                                    00000096,000
+datlivse (B17)                                    20210512
+nivitrse (B17)                                    00
+nomclise (B17)                                    STABILIMENTO CAMERON
+numcmpse (B17)                                    00000000
+snucmpse (B17)                                    000
+numcntse (B17)
+numlivse (B17)                                    21000861
+snulivse (B17)                                    000
+numplbse (B17)
+numtouse (B17)                                    00000000
+numvagse (B17)                                    21133002
+ordlivse (B17)                                    0000
+reflivse (B17)                                    ASD12051
+toulivse (B17)                                    0000
+typsupse (B17)                                    2
+zonspfse (B17)
+catemb (B05)                                      1
+libemb (B05)                                      EPAL (80x120)     25kg
+pdbemb (B05)                                      025,00
+proemb (B05)                                      EPA
+prxemb (B05)                                      0000,00
+numsupsd (B18)                                    21060811
+snusupsd (B18)                                    000
+seqsupsd (B18)                                    0001
+codprosd (B18)                                    GCO.002
+valprosd (B18)                                    00
+anaprosd (B18)
+codaclsd (B18)
+codalcsd (B18)
+codclssd (B18)
+codeapsd (B18)
+codlotsd (B18)
+codopesd (B18)
+codpalsd (B18)                                    111111111100000277
+codprnsd (B18)
+datfabsd (B18)                                    20210322
+datfvisd (B18)                                    00000000
+datprbsd (B18)                                    20210513
+degalcsd (B18)                                    000,00
+diplivsd (B18)
+ds1prosd (B18)                                    G - CO - 2
+ds2prosd (B18)
+ediprosd (B18)                                    GCO.002
+famprosd (B18)
+nlilivsd (B18)                                    00000
+numavdsd (B18)                                    000000000
+numclssd (B18)                                    0000
+numlotsd (B18)                                    000000000
+numopesd (B18)                                    000000
+numorisd (B18)                                    21000861
+pcbprosd (B18)                                    99999
+pdbcolsd (B18)                                    0010,000
+pdbuvcsd (B18)                                    0000,200
+pdnlivsd (B18)                                    00000000,001
+pdnuvcsd (B18)                                    0000,000
+prilivsd (B18)                                    000000,000
+prppicsd (B18)                                    1
+reflivsd (B18)                                    ASD12051
+seqlivsd (B18)                                    0001
+snulivsd (B18)                                    000
+snuorisd (B18)                                    000
+spcprosd (B18)                                    0000
+toplivsd (B18)
+typopesd (B18)                                    0
+uvccdesd (B18)                                    000000017
+uvclivsd (B18)                                    000000017
+uvcmnqsd (B18)                                    000000000
+uvcsrvsd (B18)                                    000000017
+volalcsd (B18)                                    000,000
+volcolsd (B18)                                    0001,000
+zonpicsd (B18)                                    F
+allpicsd (B18)                                    001
+dplpicsd (B18)                                    0002
+nivpicsd (B18)                                    20
+msgligsd (B18)
+livnumsd (B18)                                    21000861
+livsnusd (B18)                                    000
+clilivsd (B18)                                    CLI1
+kailivsd (B18)                                    010
+libkaisd (B18)                                    BAIA 10
+nomclisd (B18)                                    STABILIMENTO CAMERON
+cpiclisd (B18)
+vilclisd (B18)                                    VOGHERA
+toulivsd (B18)                                    0000
+ordlivsd (B18)                                    0000
+datlivsd (B18)                                    20210512
+colcousd (B18)                                    0001
+coupalsd (B18)                                    0001
+desfou (B03)
+foupro (B03)
+prxpro1 (B03)                                     000000,000
+prxpro2 (B03)                                     000000,000
+prxpro3 (B03)                                     000000,000
+prxpro4 (B03)                                     000000,000
+codtmd (B03)
+codmtr (B03)
+haucol (B03)                                      010,00
+hauuvc (B03)                                      010,00
+lngcol (B03)                                      010,00
+lnguvc (B03)                                      010,00
+lrgcol (B03)                                      010,00
+lrguvc (B03)                                      010,00
+colcou1 (B03)                                     0001
+colcou2 (B03)                                     0001
+coupal1 (B03)                                     0001
+coupal2 (B03)                                     0001
